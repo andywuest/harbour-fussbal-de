@@ -19,8 +19,8 @@ SOURCES += src/harbour-fussball-de.cpp
 DISTFILES += qml/harbour-fussball-de.qml \
     qml/cover/CoverPage.qml \
     qml/pages/OverviewPage.qml \
-    qml/pages/GameResultListItem.qml \
-    qml/pages/SecondPage.qml \
+    qml/pages/SettingsPage.qml \
+    qml/components/GameResultListItem.qml \
     rpm/harbour-fussball-de.changes.in \
     rpm/harbour-fussball-de.changes.run.in \
     rpm/harbour-fussball-de.spec \

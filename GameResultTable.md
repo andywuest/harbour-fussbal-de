@@ -9,9 +9,13 @@ of the game. Also the date of the game is to be displayed.
 Center the logo and the name of the home away team in the middle of the column. Use only the default SFOS margins.
 Make sure that the home and away team get the same width, each 50% of the width.
 
-Added a ComboBox above the Flickable with the results that allows the user to select the game day. 
-Use Mock data with 5 game days. 
-
 Create a separate component for the flickable items that display a single result.
+
+Put the components to the components directory.
+
+Add a Settings page, that lets the user allow to configure a competition id (String). The input field is to be labeled properly.
+The settings page can be reached via the pully menu from the Overview Page.
+User Nemo.Configuration to store the compeition id using a ConfigurationGroup in the ApplicationWindow.
+When the SettingsPage is left, do persist the configured compeition id.
 
 Use mock data for 10 made up matches, which are then displayed in the page. 
