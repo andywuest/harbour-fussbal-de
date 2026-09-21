@@ -29,4 +29,7 @@ https://next.fussball.de/_next/data/3GE9wzufdQY_tRu-Qkpfs/de/widget/competition/
 
 Add method getMatchDay(int) to the FussballBackend that calls the endpoint for the match results and setts the proper match day.
 The JSON result provided by the endpoint is then to be obfuscated, using the font decoder class. For an example how to apply
-the font decoding use the main.cpp in tools/font_obfuscation as reference.
+the font decoding use the main.cpp in tools/font_obfuscation as reference. The decoded json is the emitted as result. 
+Add a Connections element to the OverviwPage to receive the result of the getMatchDay method. 
+
+Call the get getMatchDay method in the OverviewPage to get the data and log the response to the console. 

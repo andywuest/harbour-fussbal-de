@@ -26,6 +26,7 @@ public:
 signals:
     void matchDayChanged(int matchDay);
     void matchesChanged();
+    void resultReady(const QJsonObject &decodedJson);
     void loadFailed(const QString &error);
 
 private:

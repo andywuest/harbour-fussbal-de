@@ -8,6 +8,16 @@ Page {
     // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
 
+    Connections {
+        target: fussballBackend
+        onResultReady: console.log("Game day result: " + JSON.stringify(decodedJson))
+        onLoadFailed: console.log("FussballBackend error: " + error)
+    }
+
+    Component.onCompleted: {
+        fussballBackend.getMatchDay(2)
+    }
+
     SilicaListView {
         id: listView
         anchors.fill: parent

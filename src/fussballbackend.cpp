@@ -88,10 +88,11 @@ void FussballBackend::fetchFont(const QString &fontId)
 void FussballBackend::decodeAndStore()
 {
     const QJsonValue decoded = FontDecoder::decodeJson(QJsonValue(m_jsonDoc), m_decoder);
-    m_matches = decoded.toObject()
-                    .value(QStringLiteral("pageProps"))
+    const QJsonObject decodedJson = decoded.toObject();
+    m_matches = decodedJson.value(QStringLiteral("pageProps"))
                     .toObject()
                     .value(QStringLiteral("matches"))
                     .toArray();
     emit matchesChanged();
+    emit resultReady(decodedJson);
 }
