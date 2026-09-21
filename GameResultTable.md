@@ -18,4 +18,8 @@ The settings page can be reached via the pully menu from the Overview Page.
 User Nemo.Configuration to store the compeition id using a ConfigurationGroup in the ApplicationWindow.
 When the SettingsPage is left, do persist the configured compeition id.
 
-Use mock data for 10 made up matches, which are then displayed in the page. 
+Use mock data for 10 made up matches, which are then displayed in the page. Do not use a List model with ListElement, but
+create a javascript model. Do use a SilicaListView with delegate ListItem instead of a Repeater.
+
+Add the fontdecoder in c++ (with all dependencies) from the tools/font_obfuscation directory to the SailfishOS project 
+under the src directory. Create a new directory fontobfuscation in the src directory. 

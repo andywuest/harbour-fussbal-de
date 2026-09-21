@@ -8,16 +8,12 @@ ApplicationWindow {
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
 
-    property alias competitionId: competitionIdSetting.value
+//     property alias competitionId: competitionIdSetting.value
 
     ConfigurationGroup {
         id: settings
-        path: "/harbour-fussball-de"
+        path: "/apps/harbour-fussball-de/settings"
 
-        ConfigurationValue {
-            id: competitionIdSetting
-            key: "competitionId"
-            value: ""
-        }
+        property string competitionId: ""
     }
 }

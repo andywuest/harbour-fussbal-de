@@ -25,17 +25,19 @@ Page {
                 width: parent.width
                 label: qsTr("Competition ID")
                 placeholderText: qsTr("e.g. 125123")
-                text: Window.window ? Window.window.competitionId : ""
+                text: settings.competitionId
                 EnterKey.iconSource: "image://theme/icon-m-enter-accept"
                 EnterKey.onClicked: focus = false
             }
         }
     }
 
+
     onStatusChanged: {
-        if (status === PageStatus.Inactive) {
-            if (Window.window)
-                Window.window.competitionId = competitionIdField.text
+        if (status === PageStatus.Deactivating) {
+            settings.competitionId = competitionIdField.text;
+            settings.sync();
         }
     }
+
 }
