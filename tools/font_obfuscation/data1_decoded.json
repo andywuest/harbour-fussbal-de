@@ -1,0 +1,1565 @@
+{
+  "pageProps": {
+    "translations": {
+      "common": {
+        "adLabel": "Anzeige",
+        "articleDetail": {
+          "author": "Autor*in"
+        },
+        "association": "Landesverband: {{name}}",
+        "avatarAlt": "Avatar Bild für {{name}}",
+        "avatarAlt_default": "Avatar Bild",
+        "cardRed": "Rot",
+        "cardYellow": "Gelb",
+        "cardYellowRed": "Gelb-Rot",
+        "timePenalties": "Zeitstrafen",
+        "fouls": "Fouls",
+        "chroniclesTable": {
+          "position": "Platz",
+          "season": "Saison"
+        },
+        "clipBoard": {
+          "copyError": "Beim Kopieren des Links ist ein Fehler aufgetreten.",
+          "copySuccess": "Du hast den Link erfolgreich kopiert!"
+        },
+        "competitions": "Wettbewerbe",
+        "competitionTypes": {
+          "beachsoccer": "Strandfußball",
+          "championship": "Meisterschaften",
+          "futsal": "Futsal Ligabetrieb",
+          "indoorChampionship": "Hallenturniere"
+        },
+        "contactClub": "Verein kontaktieren",
+        "contextMenu": {
+          "actions": "Aktionen",
+          "copyLink": "Link kopieren",
+          "share": "Teilen",
+          "subscribe": "Abonnieren",
+          "removeSubscription": "Abo entfernen",
+          "title": "Seitenmenü",
+          "unsubscribe": "Nicht mehr abonnieren",
+          "yourProfile": "Zum Profil",
+          "editProfile": "Profil & Konto",
+          "rolesAndPermissions": "Rollen & Rechte",
+          "verifyPlayer": "Spieler*innen-Profil verifizieren",
+          "verifyReferee": "Schiri-Profil verifizieren",
+          "reportAbuse": {
+            "profile": "Profil melden",
+            "profileInfos": "Profilinfos melden",
+            "profilePicture": "Profilbild melden",
+            "post": "Beitrag melden"
+          },
+          "help": "Hilfe & Kontakt",
+          "legalInfo": "Rechtliches / Info",
+          "login": "Anmelden",
+          "logout": "Ausloggen",
+          "reportResult": "Falsches Ergebnis",
+          "editClubProfile": "Vereinsprofil bearbeiten",
+          "editTeamProfile": "Mannschaftsprofil bearbeiten",
+          "myWidgets": "Meine Widgets",
+          "createCompetitionWidget": "Wettbewerbswidget erstellen",
+          "edit": "Bearbeiten",
+          "delete": "Löschen"
+        },
+        "embed": {
+          "linkToPostText": "Zum {{platform}} Inhalt",
+          "loadingError": "{{platform}} Inhalt konnte nicht geladen werden."
+        },
+        "favorites": {
+          "errorAddFavorite": "Favorit konnte nicht hinzugefügt werden.",
+          "successAddFavorite": "Favorit wurde erfolgreich hinzugefügt.",
+          "errorRemoveFavorite": "Favorit konnte nicht entfernt werden.",
+          "successRemoveFavorite": "Favorit wurde erfolgreich entfernt."
+        },
+        "filter": {
+          "label": "Filtern nach:",
+          "highestWin": "Höchste Siege",
+          "highestDraw": "Torreichste Unentschieden",
+          "highestLost": "Höchste Niederlagen"
+        },
+        "loadingSpinner": {
+          "description": "Inhalte werden geladen"
+        },
+        "loadMore": "Mehr anzeigen",
+        "loggedOutModal": {
+          "close": "Schließen",
+          "description": "Sei dabei, vernetze dich – werde jetzt Teil unserer Fußball-Community und tauche in die Welt des Amateurfußballs ein!",
+          "login": "Login/Registrieren",
+          "title": "Alle Vorteile genießen!"
+        },
+        "loginTeaser": {
+          "text": "Du hast bereits einen Account? Logge dich ein, um aktuelle Inhalte deiner abonnierten Profile zu sehen.",
+          "button": "Einloggen"
+        },
+        "modalContentAriaLabel": "Inhalt",
+        "more": "Mehr",
+        "mySubscriptions": {
+          "association": "Verbände",
+          "club": "Vereine",
+          "competition": "Wettbewerbe",
+          "person": "Personen",
+          "showAllButton": "Alle meine Abos",
+          "team": "Mannschaften",
+          "title": "Meine Abos"
+        },
+        "navigation": {
+          "addPostAriaLabel": "Artikel hinzufügen",
+          "loginAriaLabel": "Anmelden",
+          "mainAriaLabel": "Hauptnavigation"
+        },
+        "postMeta": {
+          "ariaLabelBookmark": "Inhalt sichern",
+          "ariaLabelHeart": "Ein Like abgeben",
+          "ariaLabelSend": "Inhalt teilen"
+        },
+        "searchBar": {
+          "placeholder": "Suchbegriff eingeben...",
+          "noResultsMessage": "Leider kein Treffer!",
+          "results": "{{count}} Treffer"
+        },
+        "noDataAvailable": "Leider sind noch keine Daten vorhanden.",
+        "noSubscriptions": "Du hast noch keine abonnierten Mannschaften. Sobald du Mannschaften abonniert hast, erscheinen deren Spiele hier. Abonnierte Vereine werden nicht unter \"Meine Spiele\" aufgeführt.",
+        "seasonPrefix": "Saison 20{{season}}",
+        "share": {
+          "brandName": "FUSSBALL.de",
+          "brandPrefix1": "via",
+          "brandPrefix2": "Inhalt von",
+          "cta": "Teilen",
+          "text": "Ich habe gerade diesen interessanten Inhalt auf FUSSBALL.de gesehen:"
+        },
+        "sideNavigation": {
+          "title": "Inhalt"
+        },
+        "topSuggestions": {
+          "title": "Abo Vorschläge"
+        },
+        "siteMeta": {
+          "siteDescription": "Das Amateurfußball-Portal mit allen Begegnungen, Ergebnissen, Tabellen und Informationen über die einzelnen Vereine in Deutschland.",
+          "siteTitle": "FUSSBALL.DE",
+          "siteUrl": "https://fussball.de"
+        },
+        "stage": {
+          "description": "Saison {{season}} • {{competitionType}} • {{teamType.value}} • {{leagueLevelName}} • {{playingAreaName}}"
+        },
+        "subscribe": "Abonnieren",
+        "subscribed": "Abonniert",
+        "subscribers_one": "{{count}} Abonnent*in",
+        "subscribers_other": "{{count, number}} Abonnent*innen",
+        "team": {
+          "logo": "Logo von {{teamName}}"
+        },
+        "teams": {
+          "title": "Mannschaften",
+          "nextMatches": "Nächste Spiele",
+          "showAllButton": "Alle Mannschaften"
+        },
+        "toggleListView": "Listenansicht",
+        "unexpectedError": "Leider ist ein Fehler aufgetreten. Bitte versuche es später noch einmal.",
+        "loadSubscriptionsError": "Leider ist beim Laden deiner Abos ein Fehler aufgetreten. Der Status deiner Abos kann deshalb nicht korrekt gezeigt werden. Bitte aktualisiere die Seite um es erneut zu versuchen.",
+        "loadUserInfoError": "Es konnte nicht geprüft werden ob du Vereins- oder Team-Berechtigungen hast. Wenn nötig, aktualisiere die Seite um es erneut zu versuchen.",
+        "player": "Spieler*in",
+        "referee": "Schiri",
+        "notSpecified": "Keine Angabe",
+        "byeTicket": "Freilose",
+        "confirmDelete": {
+          "message": "Möchtest du wirklich diesen Eintrag löschen?",
+          "confirm": "Ja, Eintrag löschen",
+          "cancel": "Abbrechen"
+        },
+        "confirmDeletePost": {
+          "message": "Möchtest du den Beitrag wirklich löschen?",
+          "confirm": "Ja, Beitrag löschen",
+          "cancel": "Abbrechen"
+        },
+        "confirmApplyTemplate": {
+          "message": "Möchtest du die Vorlage wirklich verwenden? Deine eingegebenen Texte werden dadurch überschrieben.",
+          "confirm": "Ja, Vorlage übernehmen",
+          "cancel": "Abbrechen"
+        },
+        "deleteImage": {
+          "message": "Möchtest du wirklich das Bild löschen?",
+          "confirm": "Ja, Bild löschen",
+          "cancel": "Abbrechen"
+        },
+        "unsavedChanges": {
+          "message": "Du hast ungespeicherte Änderungen. Möchtest du diese wirklich verwerfen?",
+          "confirm": "Verwerfen",
+          "cancel": "Zurück"
+        },
+        "errorDialog": {
+          "title": "Es ist ein Fehler aufgetreten"
+        },
+        "map": {
+          "address": "Adresse"
+        },
+        "ineligblePermissions": "Diese Seite ist nicht für dich verfügbar.",
+        "authErrorDialog": {
+          "description": "Deine Sitzung ist abgelaufen, du wurdest automatisch abgemeldet. Bitte melde dich erneut an.",
+          "login": "Login",
+          "continue": "Weiter Ohne Login"
+        },
+        "unsupportedDevice": {
+          "title": "Ihr Gerät wird möglicherweise nicht vollständig unterstützt.",
+          "description": "Für die beste Nutzung empfehlen wir ein kompatibles Gerät oder einen aktuellen Browser."
+        }
+      },
+      "forms": {
+        "fieldLabels": {
+          "subject": "Dein Betreff",
+          "subjectSelect": "Betreff wählen",
+          "message": "Deine Nachricht",
+          "name": "Dein Name",
+          "firstName": "Vorname",
+          "lastName": "Nachname",
+          "email": "Deine E-Mail-Adresse",
+          "emailRepeat": "Deine E-Mail-Adresse wiederholen",
+          "sendCopyCheckbox": "E-Mail Kopie an mich senden",
+          "clubName": "Dein Verein"
+        },
+        "errorMessage": {
+          "messageRequired": "Pflichtfeld: Bitte ausfüllen.",
+          "messageMaxLength": "Es dürfen nicht mehr als {{maxLength}} Zeichen eingegeben werden.",
+          "emailPattern": "Bitte Format der E-Mail-Adresse überprüfen.",
+          "phonePattern": "Bitte eine gültige Handynummer eingeben.",
+          "socialLinkPattern": "Der eingegebene Link ist kein gültiger Profillink.",
+          "websitePattern": "Bitte Format der Website überprüfen.",
+          "messageCompare": "Die E-Mail-Adressen stimmen nicht überein.",
+          "captchaError": "Die Anti-Roboter-Verifizierung wurde nicht erfolgreich durchgeführt.",
+          "serverError": "Es ist ein unerwarteter Fehler aufgetreten. Bitte später noch einmal versuchen.",
+          "clubNameRequired": "Bitte gib den Namen des Vereins ein.",
+          "clubNotFound": "Es konnte kein Verein gefunden werden.",
+          "tooManyClubs": "Es wurden mehr als {{pageSize}} Vereine gefunden. Bitte Suche spezifizieren."
+        },
+        "requiredNote": "* Pflichtfeld",
+        "submitLabel": "Absenden",
+        "success": {
+          "headline": "Nachricht erfolgreich abgeschickt",
+          "description": "Vielen Dank für deine Nachricht. Wir werden sie zeitnah bearbeiten.",
+          "toHome": "Zum Home Feed"
+        },
+        "edit": {
+          "submitLabel": "Speichern",
+          "cancelLabel": "Abbrechen",
+          "backLabel": "Bearbeiten beenden",
+          "addEntry": "Neuer Eintrag"
+        },
+        "formTitle": "Nachricht",
+        "profilePictureEdit": {
+          "ariaLabel": "Profilbild ändern",
+          "modalTitle": "Profilbild",
+          "upload": "Von Gerät hochladen",
+          "edit": "Bildausschnitt anpassen",
+          "delete": "Bild löschen",
+          "teamImageAlt": "Teambild"
+        },
+        "imageCropper": {
+          "discard": "Verwerfen",
+          "save": "Speichern"
+        },
+        "fileUpload": {
+          "maxFilesExceeded": "Maximale Anzahl von {{maxFiles}} Bildern und Videos erreicht.",
+          "deleteFile": "Datei löschen",
+          "uploadFile": "Datei hochladen",
+          "uploadFileButton": "Datei hochladen",
+          "imageAlt": "Vorschaubild",
+          "videoNotSupported": "Dein Browser unterstützt leider keine Videovorschau.",
+          "uploadFailed": "Der Upload für {{filename}} ist fehlgeschlagen, bitte versuche es erneut.",
+          "deleteFailed": "Beim Löschen der Datei {{filename}} ist ein Fehler aufgetreten, bitte versuche es erneut.",
+          "uploadTimeMessage": "Hinweis: Es kann bis zu 1 Stunde dauern, bis hinzugefügte Bilder angezeigt werden."
+        },
+        "imageUploadSuccess": "Du hast das Profilbild erfolgreich geändert.",
+        "imageUploadError": "Beim Ändern des Profilbildes ist ein Fehler aufgetreten.",
+        "imageDeleteSuccess": "Du hast das Profilbild erfolgreich gelöscht.",
+        "imageDeleteError": "Beim Löschen des Profilbildes ist ein Fehler aufgetreten.",
+        "addEditTimelineEntry": {
+          "newTitle": "Neuer Eintrag",
+          "editTitle": "Eintrag bearbeiten",
+          "role": "Rolle",
+          "from": "Saison (Start)",
+          "to": "Saison (Ende)",
+          "title": "Titel",
+          "comment": "Kommentar",
+          "confirm": "Speichern",
+          "success": "Eintrag wurde erfolgreich hinzugefügt",
+          "historySavedSuccesfully": "Verlauf erfolgreich gespeichert",
+          "historyRemovedSuccessfully": "Geschichte erfolgreich entfernt"
+        },
+        "richtext": {
+          "ariaLabelToolbar": "Werkzeugleiste",
+          "ariaLabelTools": "Formatierungsoptionen",
+          "formats": {
+            "bold": "Fettdruck",
+            "italic": "Kursiv",
+            "underline": "Unterstrichen",
+            "list": "Liste",
+            "link": "Verlinkung"
+          },
+          "placeholder": "Text verfassen…",
+          "tooltip": {
+            "labelVisitUrl": "Link aufrufen:",
+            "labelEdit": "Bearbeiten",
+            "labelRemove": "Entfernen",
+            "labelSave": "Speichern",
+            "labelEnterLink": "Link eingeben:"
+          }
+        },
+        "articleContent": {
+          "headline": "Überschrift",
+          "introHeadline": "Intro Text",
+          "introText": "Dieser Text wird als Vorschau Text innerhalb des Posts angezeigt.",
+          "contentHeadline": "Inhalt",
+          "requiredText": "* Pflichtfeld",
+          "submitLabel": "Veröffentlichen",
+          "backLabel": "Bearbeiten beenden",
+          "addEntry": "Neuer Eintrag"
+        },
+        "editProfile": {
+          "errors": {
+            "saveProfile": "Es gab einen Fehler beim Speichern der Profildaten."
+          },
+          "toast": {
+            "success": "Du hast deine Daten erfolgreich angepasst und gespeichert."
+          }
+        },
+        "colorPicker": {
+          "lightness": "Helligkeit",
+          "color": "Farbwert",
+          "hexLabel": "HEX-Farbe",
+          "missingColor": "Keine Farbe ausgewählt",
+          "errorMessage": {
+            "hexInvalid": "Ungültiger HEX-Wert.",
+            "rgbOutOfRange": "RGB-Werte müssen zwischen 0 und 255 liegen."
+          }
+        }
+      },
+      "team": {
+        "label": "Sortieren nach:",
+        "competitionFilterLabel": "Wettbewerb:",
+        "squadFilter": {
+          "gamesMinutes": "Einsatzminuten",
+          "gamesCount": "Einsätze",
+          "goals": "Tore"
+        },
+        "table": {
+          "accordion": {
+            "table": "Gesamt",
+            "homeTable": "Heim",
+            "awayTable": "Auswärts",
+            "firstRound": "Hinrunde",
+            "secondRound": "Rückrunde",
+            "crossTable": "Kreuztabelle",
+            "fairnessTable": "Fairness"
+          }
+        },
+        "competitionTable": {
+          "position": "Platz",
+          "team": "Mannschaft",
+          "matches": "Sp.",
+          "matchesWon": "G",
+          "matchesDrawn": "U",
+          "matchesLost": "V",
+          "matchOutcome": "G-U-V",
+          "goalRatio": "Tore",
+          "goalDifference": "Diff.",
+          "points": "Pkt."
+        },
+        "performancesTable": {
+          "rank": "Platz",
+          "date": "Datum",
+          "result": "Ergebnis"
+        },
+        "fairnessTable": {
+          "position": "Platz",
+          "team": "Mannschaft",
+          "matches": "Sp.",
+          "points": "Pkt.",
+          "quotient": "Quote",
+          "legend": {
+            "matches": "Spiele",
+            "points": "Fairnesspunkte",
+            "quotient": "Durchschnittliches Fehlverhalten eines Teams pro Spiel",
+            "cardYellow": "Gelbe Karten (Team / Offizielle)",
+            "cardYellowRed": "Gelb-Rote Karten (Team / Offizielle)",
+            "cardRed": "Rote Karten (Team / Offizielle)",
+            "timePenalties": "Zeitstrafen",
+            "fouls": "Fouls",
+            "cancellations": "Nicht angetretene Spiele",
+            "aborts": "Abgebrochene Spiele"
+          }
+        },
+        "crossTable": {
+          "position": "Platz",
+          "team": "Mannschaft"
+        },
+        "seasonStatistics": "Saisonstatistik",
+        "teamComparison": {
+          "direct": "Direktvergleich",
+          "matchHistory": "Begegnungen"
+        },
+        "statistics": {
+          "performance": "Leistungen",
+          "placement": "Platzierung",
+          "fairness": "Fairness",
+          "position": "Platzierung",
+          "points": "Punktzahl",
+          "matches": "Spiele",
+          "duels": "Duelle",
+          "wins": "Siege",
+          "draws": "Unentschieden",
+          "losses": "Niederlagen",
+          "goals": "Torverhältnis",
+          "trend": "Trend",
+          "bestScorer": "Beste*r Torjäger*in",
+          "bestScorerGoals": "(Tore)",
+          "cards": "Karten",
+          "timePenaltys": "Zeitstrafen"
+        },
+        "teamOverview": {
+          "title": "Die Mannschaft",
+          "competition": "Wettbewerb",
+          "position": "Tabellenplatz",
+          "points": "Punkte",
+          "goalRatio": "Torverhältnis",
+          "playingClass": "Spielklasse",
+          "coach": "Trainer*in",
+          "locations": "Spielstätten",
+          "address": "Adresse",
+          "notSpecified": "Nicht angegeben"
+        },
+        "clubOverview": {
+          "title": "Der Verein",
+          "foundingYear": "Gründungsjahr",
+          "teams": "Mannschaften",
+          "clubColors": "Vereinsfarben",
+          "contactPerson": "Ansprechpartner*in",
+          "notSpecified": "Nicht angegeben"
+        },
+        "clubContact": {
+          "title": "Kontaktinformationen",
+          "address": "Adresse",
+          "phone": "Telefon",
+          "email": "Mail",
+          "website": "Website"
+        },
+        "contactClub": "Verein kontaktieren",
+        "formTitle": "Nachricht",
+        "createTeamNews": "Mannschafts-News erstellen",
+        "articleContent": {
+          "title": "Mannschafts-News verfassen",
+          "success": "Mannschafts-News erfolgreich erstellt",
+          "content": "Mannschafts-News"
+        },
+        "updateArticleContent": {
+          "title": "Mannschafts-News bearbeiten",
+          "success": "Du hast den Beitrag erfolgreich bearbeitet"
+        },
+        "editData": {
+          "userSearchPlaceholder": "Benutzername eingeben",
+          "restrictedDataWarning": "Manche Daten können nur durch Mannschaftsverantwortliche des DFB geändert werden. Solltest du einen fehlerhaften Eintrag finden, kontaktiere uns gerne über unser Kontaktformular.",
+          "selectUserWarning": "Es können nur Nutzer*innen mit einem öffentlichen FBDE-Profil hinzugefügt werden.",
+          "confirmSelect": "Speichern",
+          "confirmDelete": "Ja, entfernen",
+          "successRevokeRole": "Der Benutzer wurde entfernt.",
+          "imageUploadWarning": "Es kann einige Minuten dauern, bis die Änderungen am Profil sichtbar sind."
+        },
+        "editTeamProfile": {
+          "title": "Profil & Konto",
+          "picture": "Mannschafts-Foto",
+          "teamInfo": "Mannschafts-Info",
+          "venues": "Spielstätten",
+          "venue": "Spielstätte",
+          "noAddress": "Keine Adresse",
+          "addVenue": "Spielstätte hinzufügen",
+          "contact": "Kontaktmöglichkeiten",
+          "phone": "Telefon",
+          "email": "E-Mail",
+          "website": "Website",
+          "socialMedia": "Social Media",
+          "facebook": "Facebook",
+          "instagram": "Instagram",
+          "tiktok": "TikTok",
+          "youtube": "YouTube"
+        },
+        "editTeamRoles": {
+          "title": "Profil-Rechte",
+          "nameLabel": "Name",
+          "usernameLabel": "Username",
+          "TEAM_EDITOR": {
+            "heading": "Redakteur*innen",
+            "add": "Redakteur hinzufügen",
+            "delete": "Redakteur Löschen",
+            "confirmDeleteMessage": "Möchtest du die Redakteurin / den Redakteur wirklich entfernen?"
+          },
+          "VICE_TEAM_ADMINISTRATOR": {
+            "heading": "Hinzugefügte Mannschaftsverantwortliche",
+            "add": "Verantwortlichen hinzufügen",
+            "delete": "Mannschaftsverantwortlicher Löschen",
+            "confirmDeleteMessage": "Möchtest du die Mannschaftsverantwortliche / den Mannschaftsverantwortlichen wirklich entfernen?"
+          }
+        },
+        "teamIndex": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | {{ageGroup}} | Profil | $t(common:siteMeta.siteTitle)",
+            "description": "Das Profil der Mannschaft {{name}} - bleib am Ball und schaue dir Spiele, Beiträge, Infos, Wettbewerbe und vieles mehr an."
+          }
+        },
+        "teamInfo": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | {{ageGroup}} | Info | $t(common:siteMeta.siteTitle)"
+          }
+        },
+        "teamMatches": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | {{ageGroup}} | Spiele | $t(common:siteMeta.siteTitle)",
+            "description": "Das Profil der Mannschaft {{name}} {{ageGroup}} - hier findest du alle Spiele der Mannschaft pro Saison."
+          }
+        },
+        "teamSquad": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | {{ageGroup}} | Kader | $t(common:siteMeta.siteTitle)",
+            "description": "Das Profil der Mannschaft {{name}} {{ageGroup}} - hier findest du den aktuellen und vorherige Kader der Mannschaft."
+          }
+        },
+        "teamTable": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | {{ageGroup}} | Tabelle | $t(common:siteMeta.siteTitle)",
+            "description": "Das Profil der Mannschaft {{name}} {{ageGroup}} - alle Tabellen zur Mannschaft: Hinrunde, Rückrunde, Heimtabelle, Auswärtstabelle und Kreuztabelle."
+          }
+        },
+        "teamStatistics": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | {{ageGroup}} | Statistik | $t(common:siteMeta.siteTitle)",
+            "description": "Das Profil der Mannschaft {{name}} {{ageGroup}} - die Statistiken zur Mannschaft: Leistungen, Platzierungen und Fairness."
+          }
+        },
+        "teamChronicles": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | {{ageGroup}} | Chronik | $t(common:siteMeta.siteTitle)",
+            "description": "Das Profil der Mannschaft {{name}} {{ageGroup}} - die Chronik der Mannschaft: Die Platzierung pro Saison."
+          }
+        },
+        "teamEditProfile": {
+          "pageMeta": {
+            "pageTitle": "Profil bearbeiten | {{name}} | {{ageGroup}} | Über uns | $t(common:siteMeta.siteTitle)",
+            "description": "Bearbeite das Profil der Mannschaft {{name}} {{ageGroup}} - Editieren allgemeiner Daten über die Mannschaft."
+          }
+        },
+        "teamEditRights": {
+          "pageMeta": {
+            "pageTitle": "Profil bearbeiten | {{name}} | {{ageGroup}} | Profil und Rechte | $t(common:siteMeta.siteTitle)",
+            "description": "Bearbeite das Profil der Mannschaft {{name}} {{ageGroup}} - Editieren der Rollen und Rechte dieser Mannschaft."
+          }
+        },
+        "teamNewsEdit": {
+          "pageMeta": {
+            "pageTitle": "Mannschaftsnews verfassen | {{name}} | {{ageGroup}} | $t(common:siteMeta.siteTitle)",
+            "description": "Verfasse Mannschaftsnews für die Mannschaft {{name}} {{ageGroup}}."
+          }
+        },
+        "teamNewsDetail": {
+          "pageMeta": {
+            "pageTitle": "{{title}} | {{name}} | {{ageGroup}} | $t(common:siteMeta.siteTitle)"
+          }
+        }
+      },
+      "matches": {
+        "pageMeta": {
+          "pageTitle": "Spiele | $t(common:siteMeta.siteTitle)",
+          "description": "Finde alle deine Spiele und alle Wettbewerbe in ganz Deutschland."
+        },
+        "myMatches": {
+          "headline": "Meine Spiele"
+        },
+        "overview": {
+          "headline": "Alle Wettbewerbe",
+          "findMatches": "Wettbewerb finden",
+          "topCompetitions": "Top-Wettbewerbe - {{leagueType}} 20{{season}}",
+          "recommendedCompetitions": "Für dich empfohlen"
+        },
+        "competitionFinder": {
+          "submitLabel": "Wettbewerb Anzeigen",
+          "noDataError": "Leider liegen für die getätigte Auswahl keine Spieldaten vor."
+        },
+        "competitionDetails": {
+          "friendly": "Freundschaftsspiel"
+        },
+        "sidebar": {
+          "venue": "Spielstätte",
+          "competition": "Wettbewerb",
+          "teams": "Mannschaften"
+        },
+        "postponed": "verlegt",
+        "rescheduled_matchday": "Verlegte Spiele ausserhalb des Spieltages",
+        "nextMatches": "Nächste Spiele",
+        "prevMatches": "Vergangene Spiele",
+        "nextMatchesNotAvailable": "Es liegen aktuell keine Daten für die nächsten Spiele vor.",
+        "prevMatchesNotAvailable": "Es liegen aktuell keine Daten für die vergangenen Spiele vor.",
+        "bfvTickerNotAvailable": "Liveticker zu BFV-Spielen befinden sich auf der BFV Webseite oder in der BFV App.",
+        "kickoff": "Spielbeginn",
+        "matchFree": "Spielfrei",
+        "provisional": "Vorläufig",
+        "teamPlanned": "In Planung",
+        "previousGames": "Vergangene Spiele",
+        "nextGames": "Nächste Spiele",
+        "lineupTable": {
+          "startingLineup": "Startaufstellung",
+          "substitutesBench": "Ersatzbank",
+          "coach": "Trainer*in",
+          "captain": "Kapitän",
+          "keeper": "Torwart"
+        },
+        "history": {
+          "duels": "Spiele Gegeneinander"
+        },
+        "abbreviation": "Kürzel",
+        "symbols": "Symbole",
+        "legend": {
+          "title": "Legende"
+        },
+        "matchLegendData": {
+          "abbreviationTitle": "Kürzel bei einem Ergebnis",
+          "abreviationTeamTitle": "Kürzel bei einer Mannschaft",
+          "matchLive": {
+            "abbreviation": "LIVE",
+            "description": "Aktuelles Ergebnis aus einem Liveticker. Ergebnis ist noch nicht offiziell bestätigt."
+          },
+          "matchFinished": {
+            "abbreviation": "ABPFIFF",
+            "description": "Das Endergebnis ist vorläufig und noch nicht offiziell bestätigt."
+          },
+          "matchTicker": {
+            "abbreviation": "Ticker",
+            "description": "Spiel hat einen Liveticker."
+          },
+          "matchLivestream": {
+            "description": "Spiel hat einen Livestream."
+          },
+          "matchExtended": {
+            "abbreviation": "n.V.",
+            "description": "Spiel endete nach Verlängerung."
+          },
+          "matchPenalty": {
+            "abbreviation": "n.E.",
+            "description": "Spiel endete nach Elfmeterschießen."
+          },
+          "teamNoResult": {
+            "abbreviation": "o.E.",
+            "description": "Keine Ergebnisanzeige, da die Staffel nicht im Leistungsbetrieb spielt."
+          },
+          "matchScore": {
+            "abbreviation": "1:0 §",
+            "description": "Ergebnis durch Sportgerichtsurteil, reguläre Wertung."
+          },
+          "matchSportCourt": {
+            "abbreviation": "1:0 § 0:1",
+            "description": "Ergebnis durch Sportgerichtsurteil, Sonderwertung."
+          },
+          "matchAdministrative": {
+            "abbreviation": "1:0 V",
+            "description": "Ergebnis durch Verwaltungsentscheid, reguläre Wertung."
+          },
+          "matchAdministrativeOpen": {
+            "abbreviation": "1:0 V 0:1",
+            "description": "Ergebnis durch Verwaltungsentscheid, Sonderwertung."
+          },
+          "matchRating": {
+            "abbreviation": "1:0 W",
+            "description": "Ergebnis durch Wertung Spielinstanz, reguläre Wertung."
+          },
+          "matchRatingOpen": {
+            "abbreviation": "1:0 W 0:1",
+            "description": "Ergebnis durch Wertung Spielinstanz, Sonderwertung."
+          },
+          "matchCanceled": {
+            "abbreviation": "Annulierung",
+            "description": "Spiel wurde annuliert."
+          },
+          "matchDeposed": {
+            "abbreviation": "Abgesetzt",
+            "description": "Spiel wurde abgesetzt."
+          },
+          "matchDiscontinued": {
+            "abbreviation": "Ausfall",
+            "description": "Spiel ist ausgefallen."
+          },
+          "matchAbort": {
+            "abbreviation": "Abbruch",
+            "description": "Spiel wurde abgebrochen."
+          },
+          "teamsForfeit": {
+            "abbreviation": "n.an.",
+            "description": "Beide Mannschaften nicht angetreten."
+          },
+          "teamHomeForfeit": {
+            "abbreviation": "n.an. Heim",
+            "description": "Heimmannschaft nicht angetreten."
+          },
+          "teamGuestForfeit": {
+            "abbreviation": "n.an. Gast",
+            "description": "Gastmannschaft nicht angetreten."
+          },
+          "provisional": {
+            "abbreviation": "Vorläufig",
+            "description": "Spielansetzung noch nicht offiziell bestätigt."
+          },
+          "teamFree": {
+            "abbreviation": "/, Spielfrei",
+            "description": "Die Mannschaft hat spielfrei."
+          },
+          "teamNonCompetitive": {
+            "abbreviation": "o.W.",
+            "description": "Diese Mannschaft spielt in dieser Staffel nicht mehr mit, die Ergebnisse werden aber eingerechnet."
+          },
+          "teamWithdraw": {
+            "abbreviation": "zg.",
+            "description": "Diese Mannschaft wurde zurückgezogen, die Ergebnisse werden aber eingerechnet."
+          },
+          "specialRating": {
+            "abbreviation": "SW",
+            "description": "Für diese Mannschaft ist eine separate Sonderwertung eingerechnet."
+          }
+        },
+        "matchCard": {
+          "toGame": "ZUM SPIEL",
+          "matchDateTime": "Uhr",
+          "live": "LIVE",
+          "unconfirmed": "ABPFIFF",
+          "ticker": "Ticker"
+        },
+        "matchOverview": {
+          "courseOfPlay": "Spielverlauf",
+          "createMatchReport": "Spielbericht erstellen",
+          "notSpecified": "Keine Angabe",
+          "pushEnabled": "Push Aktiviert",
+          "referee": "Schiedsrichter*in",
+          "assistent1": "1. Assistent*in",
+          "assistent2": "2. Assistent*in",
+          "fourthOfficial": "4. Offizielle*r",
+          "spectators": "Zuschauer*innen",
+          "venue": "Spielstätte",
+          "venueType": "Platzart",
+          "highlights": "Highlights",
+          "livestream": "Livestream",
+          "videoHighlightAltText": "Highlights Video des Spiels",
+          "videoLivestreamAltText": "Livestream Video des Spiels",
+          "information": "Spielinformationen",
+          "matchday": "Spieltag",
+          "matchIdentifier": "Spiel-ID",
+          "competitionId": "Staffel-ID",
+          "association": "Verband",
+          "round": "Runde",
+          "teams": "Teilnehmer"
+        },
+        "articleContent": {
+          "title": "Spielbericht bearbeiten",
+          "success": "Spielbericht erfolgreich erstellt",
+          "content": "Spielbericht",
+          "failed": "Die Erstellung des Spielberichts ist fehlgeschlagen",
+          "textTemplates": {
+            "headline": "Vorlagen",
+            "existsText": "Für dieses Spiel sind Textvorlagen vorhanden.",
+            "missingText": "Für dieses Spiel sind noch keine Textvorlagen vorhanden.",
+            "label": "Vorlage",
+            "applied": "Textvorlage angewendet"
+          }
+        },
+        "updateArticleContent": {
+          "title": "Spielbericht bearbeiten",
+          "success": "Du hast den Beitrag erfolgreich bearbeitet"
+        },
+        "livetickerUpdate": "Updates zeigen",
+        "livetickerUpdateError": "Leider ist beim Laden der Updates ein Fehler aufgetreten. Bitte aktualisiere die Seite, um es erneut zu versuchen.",
+        "matchDetailOverview": {
+          "pageMeta": {
+            "pageTitle": "Spieldetailseite | Überblick | $t(common:siteMeta.siteTitle)",
+            "description": "Der Überblick zum Spiel, mit einer Zusammenfassung des Spielverlaufs und den wichtigsten Informationen auf einem Blick."
+          }
+        },
+        "matchDetailTable": {
+          "pageMeta": {
+            "pageTitle": "Spieldetailseite | Tabelle | $t(common:siteMeta.siteTitle)",
+            "description": "Die Tabelle der Liga des Spiels - hier siehst du, wie die Mannschaften im Wettbewerb dastehen."
+          }
+        },
+        "matchDetailPosts": {
+          "pageMeta": {
+            "pageTitle": "Spieldetailseite | Beiträge | $t(common:siteMeta.siteTitle)",
+            "description": "Alle Spielberichte und Beiträge zum Spiel - hier kannst du nachlesen, wie das Spiel verlaufen ist."
+          }
+        },
+        "matchDetailLiveticker": {
+          "pageMeta": {
+            "pageTitle": "Spieldetailseite | Liveticker | $t(common:siteMeta.siteTitle)",
+            "description": "Der Liveticker zum Spiel - hier kannst du Minute für Minute nachverfolgen, was während des Spiels passiert ist."
+          }
+        },
+        "matchDetailSetup": {
+          "pageMeta": {
+            "pageTitle": "Spieldetailseite | Aufstellung | $t(common:siteMeta.siteTitle)",
+            "description": "Die Aufstellung zum Spiel - hier siehst du, mit welchen Spieler*innen die Teams antreten."
+          }
+        },
+        "matchDetailStatistics": {
+          "pageMeta": {
+            "pageTitle": "Spieldetailseite | Statistiken | $t(common:siteMeta.siteTitle)",
+            "description": "Die Statistiken zum Spiel - hier kannst du den Saisonverlauf der beiden Mannschaften miteinadner vergleichen."
+          }
+        },
+        "matchDetailHistory": {
+          "pageMeta": {
+            "pageTitle": "Spieldetailseite | Historie | $t(common:siteMeta.siteTitle)",
+            "description": "Die Historie zum Spiel - hier findest du die wichtigsten Daten zu vergangenen Duellen der Mannschaften."
+          }
+        },
+        "matchDetailMatchReportCreate": {
+          "pageMeta": {
+            "pageTitle": "Spielbericht erstellen | $t(common:siteMeta.siteTitle)",
+            "description": "Verfasse einen Spielbericht, um Fans der Mannschaft den Spielverlauf zu beschreiben."
+          }
+        },
+        "matchDetailMatchReport": {
+          "pageMeta": {
+            "pageTitle": "{{postTitle}} | Spielbericht | $t(common:siteMeta.siteTitle)"
+          }
+        },
+        "matchCardCollectionHeader": {
+          "kickoffTime": "Datum / Zeit",
+          "homeTeam": "Heim",
+          "result": "Ergebnis",
+          "awayTeam": "Gast"
+        },
+        "matchDetailMatchReportEdit": {
+          "pageMeta": {
+            "pageTitle": "Spielbericht verfassen | $t(common:siteMeta.siteTitle)",
+            "description": "Verfasse einen Spielbericht, um Fans der Mannschaft den Spielverlauf zu beschreiben."
+          }
+        },
+        "matchTimeline": {
+          "kickoff": "Anpfiff",
+          "finalWhistle": "Abpfiff",
+          "halftime": "Halbzeit",
+          "extraTimeStart": "Anpfiff Verlängerung",
+          "extraTimeEnd": "Abpfiff Verlängerung",
+          "penaltyShootoutStart": "Beginn Elfmeterschießen",
+          "penaltyShootoutEnd": "Ende Elfmeterschießen",
+          "ownGoal": "(ET)",
+          "penaltyGoal": "(11m)",
+          "legend": {
+            "goal": "Tor",
+            "ownGoal": "Eigentor",
+            "penaltyGoal": "Elfmetertor",
+            "cardYellow": "Gelbe Karte",
+            "cardYellowRed": "Gelb-Rote Karte",
+            "cardRed": "Rote Karte",
+            "timePenalties": "Zeitstrafe",
+            "substitution": "Wechsel",
+            "substitutionIn": "Einwechslung",
+            "substitutionOut": "Auswechslung",
+            "captain": "Kapitän",
+            "keeper": "Torwart"
+          }
+        }
+      },
+      "widgets": {
+        "template": {
+          "SQUAD": {
+            "headline": "Kader",
+            "headlineWithDetails": "Kader - {{teamName}}"
+          },
+          "NEXT_MATCH": {
+            "headline": "Nächstes Spiel",
+            "headlineWithDetails": "Nächstes Spiel - {{teamName}}"
+          },
+          "CLUB_MATCHES": {
+            "headline": "Letzte/Nächste Spiele",
+            "headlineWithDetails": "Letzte/Nächste Spiele - {{clubName}}",
+            "headlineNext": "Nächste Spiele",
+            "headlineNextWithDetails": "Nächste Spiele - {{clubName}}",
+            "headlinePrev": "Letzte Spiele",
+            "headlinePrevWithDetails": "Letzte Spiele - {{clubName}}"
+          },
+          "TEAM_MATCHES": {
+            "headline": "Letzte/Nächste Spiele",
+            "headlineWithDetails": "Letzte/Nächste Spiele - {{teamName}} - {{competitionName}}",
+            "headlineNext": "Nächste Spiele",
+            "headlineNextWithDetails": "Nächste Spiele - {{teamName}} - {{competitionName}}",
+            "headlinePrev": "Letzte Spiele",
+            "headlinePrevWithDetails": "Letzte Spiele - {{teamName}} - {{competitionName}}"
+          },
+          "COMPETITION": {
+            "headline": "Spielplan",
+            "headlineWithDetails": "Spielplan - {{competitionName}}",
+            "matchDayTabLabel": "Spieltag",
+            "roundTabLabel": "Spiele",
+            "tableTabLabel": "Tabelle"
+          },
+          "NEWS": {
+            "headline": "News",
+            "headlineWithDetails": "News - {{teamName}}",
+            "noNews": "Keine News vorhanden."
+          },
+          "TABLE": {
+            "headline": "Tabelle - {{competitionName}}"
+          }
+        },
+        "widget": {
+          "pageMeta": {
+            "pageTitle": "Widget-Einstellungen | Widgets | $t(common:siteMeta.siteTitle)",
+            "description": "Nimm Grundeinstellungen zu Widgets vor, um Inhalte von FUSSBALL.DE professionell und automatisiert in externe Seiten einzubinden."
+          },
+          "settings": {
+            "pageMeta": {
+              "pageTitle": "Erweiterte Einstellungen | Widgets | $t(common:siteMeta.siteTitle)",
+              "description": "Nimm weitere deatllierte Einstellungen zu Widgets vor, um Inhalte von FUSSBALL.DE professionell und automatisiert in externe Seiten einzubinden."
+            },
+            "headline": "Widget-Informationen",
+            "update": "Änderungen speichern",
+            "updateSuccess": "Dein Widget wurde erfolgreich gespeichert.",
+            "delete": "Widget löschen",
+            "deleteSuccess": "Das Widget wurde erfolgreich gelöscht."
+          },
+          "options": {
+            "showTable": {
+              "description": "Die Tabelle wird nur gezeigt wenn sie im Wettbewerb verfügbar ist."
+            }
+          },
+          "edit": {
+            "headline": "Bearbeiten",
+            "colors": {
+              "headline": "Farbeinstellungen"
+            },
+            "update": "Änderungen speichern",
+            "updateSuccess": "Dein Widget wurde erfolgreich gespeichert."
+          },
+          "preview": {
+            "headline": "Vorschau",
+            "button": "Vorschau anzeigen",
+            "errorPreview": "Beim Laden der Vorschau ist ein Fehler aufgetreten. Bitte später noch einmal versuchen."
+          },
+          "code": {
+            "pageMeta": {
+              "pageTitle": "Code anzeigen | Widgets | $t(common:siteMeta.siteTitle)",
+              "description": "Lass dir den Code zur Einbindung des API-Javascripts im Head und des Widgets im Body deiner Website anzeigen."
+            },
+            "headHeadline": "Einbindung des API-Javascripts im <head>-Bereich deiner Website",
+            "bodyHeadline": "Einbindung des Widgets im <body>-Bereich deiner Website",
+            "widthOption": {
+              "headline": "Widget-Breite",
+              "subline": "Die Widget-Breite passt sich standardmäßig responsiv an den verfügbaren Platz an. Um eine individuelle Breite festzulegen, gib den gewünschten Wert in das untenstehende Textfeld ein und nutze den aktualisierten Code für den <body>-Bereich.",
+              "inputPlaceholder": "Widget-Breite in Pixel"
+            }
+          },
+          "embed": {
+            "error": "Das Widget kann nicht angezeigt werden, da die aktuelle Website nicht mit der Website in der Widget-Konfiguration übereinstimmt."
+          }
+        },
+        "myWidgets": {
+          "pageMeta": {
+            "pageTitle": "Meine Widgets | Widgets | $t(common:siteMeta.siteTitle)",
+            "description": "Verwalte deine Widgets und erstelle kostenfreie Neue, um Inhalte von FUSSBALL.DE professionell und automatisiert in externe Seiten einzubinden."
+          },
+          "headline": "Meine Widgets",
+          "createNewWidget": "Neues Widget erstellen",
+          "widgetNotSupported": "Dieses Widget wird zurzeit nicht unterstützt. Bitte versuchen Sie es später erneut.",
+          "createWidgetSuccess": "Dein Widget wurde erfolgreich erstellt.",
+          "newWidget": "Neues Widget {{widgetName}}",
+          "back": "Zurück",
+          "further": "Weiter",
+          "create": "Widget erstellen",
+          "overviewLabels": {
+            "widgetType": "Widget-Typ",
+            "domain": "Website",
+            "createdAt": "Erstellt am",
+            "cta": "Zum Widget"
+          },
+          "fieldLabels": {
+            "widgetType": "Widget",
+            "club": "Vereinsname",
+            "team": "Mannschaft",
+            "name": "Name des Widgets",
+            "url": "Website der Widget-Einbindung",
+            "agb": "Ich bin mit den [Datenschutzbestimmungen](https://www.fussball.de/privacy#!/) und [Nutzungsbedingungen](https://www.dfb.de/nutzungsbedingungen/) einverstanden. *",
+            "agbDescription": "Hinweis: Durch die Nutzung und Einbindung der FUSSBALL.DE-Widgets, sind Sie als Webseitenbetreiber dafür verantwortlich, die Besucher Ihrer Webseite auf den Einsatz des Widgets und die damit verbundenen Datenschutzbestimmungen, insbesondere im Bereich \"Webtracking\", von FUSSBALL.DE hinzuweisen."
+          }
+        },
+        "instructions": {
+          "pageMeta": {
+            "pageTitle": "Nutzungshinweise | Widgets | $t(common:siteMeta.siteTitle)",
+            "description": "Lese die Nutzungsbedingungen zu Widgets, die es ermöglichen, Inhalte von FUSSBALL.DE professionell und automatisiert in externe Seiten einzubinden."
+          },
+          "headline": "Widgets Nutzungshinweise",
+          "body": "<p>Unsere kostenfreien Widgets wurden speziell für Vereine entwickelt und ermöglicht es Spielpläne, Ergebnisse und Tabellen sowie Kaderlisten aller zugehörigen Teams professionell und voll automatisiert in die eigene Website einzubinden. Ohne manuellen Aufwand ist der Internetauftritt deines Klubs so stets auf dem aktuellen Stand. Per einfachem Klick gelangen die Nutzer zu weiterführenden Informationen ihrer Lieblingsmannschaft oder Details zu einzelnen Spielen auf <a href='https://www.fussball.de/' target='fussballde'>FUSSBALL.DE</a>.</p><p>Bei der Einbindung von Widgets & Plugins ist generell zu beachten, dass dabei mindestens die IP-Adresse des Abrufenden an den Anbieter übertragen werden. Diese Übertragung ist in aller Regel wegen des berechtigten Interesses des Verantwortlichen (Art. 6 Abs. 1 Satz 1 lit. f DSGVO) rechtlich zulässig. Dies gilt natürlich auch für die Widgets & Plugins bei <a href='https://www.fussball.de/' target='fussballde'>fussball.de</a>. Wichtig ist, dass die Betroffenen über die Einbindung und die damit einhergehende Übertragung der Daten im Rahmen der Datenschutzerklärung auf der Website informiert werden. Dies kann zum Beispiel durch folgenden Text erfolgen: „Auf unserer Website nutzen wir die sog. Widgets von <a href='https://www.fussball.de/' target='fussballde'>fussball.de</a>, um Statistiken und weitere Informationen über unseren Verein und Mannschaft(en) anzuzeigen. Dazu binden wir Daten direkt von fusball.de ein. Um diese Daten abzurufen, übermittelt Dein Browser automatisch Deine IP-Adresse an den Server von <a href='https://www.fussball.de/' target='fussballde'>fussball.de</a>, welcher von der DFB GmbH mit Sitz in Frankfurt/Main betrieben wird. Diese von unserer Website veranlasste Übermittlung liegt in unserem berechtigten Interesse an einer informativen und aktuellen Gestaltung unserer Website (Art. 6. Abs. 1 Satz 1 lit. f DSGVO).“</p>"
+        }
+      },
+      "competition": {
+        "matchDay": "{{matchDay}}. Spieltag {{dates}}",
+        "matchdayFilterLabel": "Spieltag:",
+        "roundFilterLabel": "Runde:",
+        "groupFilterLabel": "Gruppe:",
+        "tabSwitchMatches": "Spiele",
+        "tabSwitchTable": "Tabelle",
+        "organiser": "Veranstalter",
+        "event": "Event",
+        "beginsAt": "Beginn",
+        "goalScorerTable": {
+          "position": "Platz",
+          "player": "Spieler*in",
+          "goals": "Tore"
+        },
+        "sidebar": {
+          "topScorers": "Top 5 Torjäger",
+          "viewAllTopScorers": "alle torjäger ansehen"
+        },
+        "prePublished": {
+          "headline": "Wichtiger Hinweis zum Spielplan",
+          "text": "Dieser Spielplan enthält vorläufige Spiele, die noch nicht vom Staffelleiter freigegeben worden sind. Bitte warte für weitere Informationen auf die finale Freigabe."
+        },
+        "competitionMatchday": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | Saison {{season}} | Spieltag | $t(common:siteMeta.siteTitle)",
+            "description": "Hier findest du die vergangenen und anstehenden Spieltage des Wettbewerbes {{name}} in der Saison {{season}} mit Mannschaften und Ergebnissen."
+          }
+        },
+        "competitionMatchdayRoundBased": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | Saison {{season}} | Runde | $t(common:siteMeta.siteTitle)",
+            "description": "Hier findest du die Übersicht der Spiele der verschiedenen Runden des Wettbewerbes {{name}} in der Saison {{season}}."
+          }
+        },
+        "competitionTable": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | Saison {{season}} | Tabelle | $t(common:siteMeta.siteTitle)",
+            "description": "Hier findest du alle Tabellen zum Wettbewerb {{name}} in der Saison {{season}}: Hinrunde, Rückrunde, Heimtabelle, Auswärtstabelle und Kreuztabelle."
+          }
+        },
+        "competitionGoalscorers": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | Saison {{season}} | Torjäger*innen | $t(common:siteMeta.siteTitle)",
+            "description": "Hier findest du die Liste der Torjäger*innen des Wettbewerbes {{name}} in der Saison {{season}}."
+          }
+        },
+        "competitionFairness": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | Saison {{season}} | Fairness | $t(common:siteMeta.siteTitle)",
+            "description": "Hier findest du alle Infos zur Fairness des Wettbewerbes {{name}} in der Saison {{season}} pro Mannschaft."
+          }
+        },
+        "competitionTeams": {
+          "pageMeta": {
+            "pageTitle": "{{name}} | Saison {{season}} | Mannschaften | $t(common:siteMeta.siteTitle)",
+            "description": "Hier findest du alle Mannschaften, die an dem Wettbewerb {{name}} in der Saison {{season}} teilnehmen."
+          }
+        }
+      }
+    },
+    "generatedAt": "2026-09-19T16:54:05.621Z",
+    "obfuscatedFont": "0789kekw",
+    "configuredHost": "www.tsvheumadenfussball.de",
+    "isPreview": false,
+    "uuid": "ac5e71aa-1ee8-4579-9508-1a2f27fe240d",
+    "colorStyle": {
+      "--color-brand": "#5afa5a",
+      "--color-primary": "var(--color-brand)",
+      "--color-text-highlight": "var(--color-text)",
+      "--color-text-very-silent": "var(--color-text-silent)",
+      "--color-border": "var(--color-text)",
+      "--color-disabled": "#cdcdd2",
+      "--color-border-silent": "var(--color-disabled)",
+      "--color-muted": "var(--color-disabled)",
+      "--color-match-result-pending": "var(--color-text-silent)",
+      "--color-match-state-important": "var(--color-text)",
+      "--color-text": "#19191e",
+      "--color-background": "#ffffff",
+      "--color-background-table": "#f0f0f5",
+      "--color-text-silent": "#9ba0a0"
+    },
+    "cacheTime": 3600,
+    "competitionName": "Quali-Regionenstaffel Mitte 2",
+    "competitionType": "Championship",
+    "competition": {
+      "competitionId": "031FJDQ9MS000000VS5489BUVSJ4CRAP-C",
+      "competitionName": "Quali-Regionenstaffel Mitte 2",
+      "competitionType": "Meisterschaften",
+      "leagueLevelName": "Regionenstaffel",
+      "performanceClass": "C-Juniorinnen",
+      "playingAreaName": "Württemberg",
+      "season": "26/27"
+    },
+    "defaultCompoundId": "",
+    "currentMatchDay": "1",
+    "matchDays": [
+      {
+        "from": "2026-09-18T22:00:00.000Z",
+        "number": 1,
+        "until": "2026-09-19T22:00:00.000Z"
+      },
+      {
+        "from": "2026-09-25T22:00:00.000Z",
+        "number": 2,
+        "until": "2026-09-26T22:00:00.000Z"
+      },
+      {
+        "from": "2026-10-02T22:00:00.000Z",
+        "number": 3,
+        "until": "2026-10-03T22:00:00.000Z"
+      },
+      {
+        "from": "2026-10-09T22:00:00.000Z",
+        "number": 4,
+        "until": "2026-10-10T22:00:00.000Z"
+      },
+      {
+        "from": "2026-10-16T22:00:00.000Z",
+        "number": 5,
+        "until": "2026-10-17T22:00:00.000Z"
+      },
+      {
+        "from": "2026-11-06T23:00:00.000Z",
+        "number": 6,
+        "until": "2026-11-06T23:00:00.000Z"
+      },
+      {
+        "from": "2026-11-13T23:00:00.000Z",
+        "number": 7,
+        "until": "2026-11-14T23:00:00.000Z"
+      },
+      {
+        "from": "2026-11-20T23:00:00.000Z",
+        "number": 8,
+        "until": "2026-11-21T23:00:00.000Z"
+      },
+      {
+        "from": "2026-11-27T23:00:00.000Z",
+        "number": 9,
+        "until": "2026-11-28T23:00:00.000Z"
+      }
+    ],
+    "matches": [
+      {
+        "id": "032044DOHC000000VS5489BUVSORQI22",
+        "status": "acknowledged",
+        "kickoff": {
+          "dateKey": "713819392",
+          "date": "18.09.2026",
+          "dateWithWeekday": "Freitag, 18.09.2026",
+          "time": "18:30"
+        },
+        "live": false,
+        "liveTickerCount": null,
+        "videoCount": 0,
+        "notAllocated": false,
+        "competitionName": "Quali-​Regionenstaffel Mitte 2",
+        "competitionBasicTypeId": "",
+        "competitionBasicTypeName": "",
+        "compoundId": "031LPSKDE0000004VS5489BUVVKNMR0J-G",
+        "leagueLevel": "",
+        "teamType": "C-​Juniorinnen",
+        "guestTeam": {
+          "teamPermanentId": "027N0F99P0000000VS5489B2VSOPA3SJ",
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNB1000009TVV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "name": "TSV Heumaden",
+          "clubId": "00ES8GNB1000009TVV0AG08LVUPGND5I"
+        },
+        "homeTeam": {
+          "teamPermanentId": "02ICHRF9A0000000VS5489B2VU2I8R4H",
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNAUG00001TVV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "name": "TSV Deizisau",
+          "clubId": "00ES8GNAUG00001TVV0AG08LVUPGND5I"
+        },
+        "result": {
+          "text": "0:6",
+          "homeResult": "0",
+          "guestResult": "6"
+        },
+        "hasSubscription": false,
+        "venue": null,
+        "prePublished": false
+      },
+      {
+        "id": "032044DODS000000VS5489BUVSORQI22",
+        "status": "acknowledged",
+        "kickoff": {
+          "dateKey": "713819392",
+          "date": "18.09.2026",
+          "dateWithWeekday": "Freitag, 18.09.2026",
+          "time": "19:00"
+        },
+        "live": false,
+        "liveTickerCount": null,
+        "videoCount": 0,
+        "notAllocated": false,
+        "competitionName": "Quali-​Regionenstaffel Mitte 2",
+        "competitionBasicTypeId": "",
+        "competitionBasicTypeName": "",
+        "compoundId": "031LPSKDE0000004VS5489BUVVKNMR0J-G",
+        "leagueLevel": "",
+        "teamType": "C-​Juniorinnen",
+        "guestTeam": {
+          "teamPermanentId": "02ESQGI450000000VS5489B1VT0RKM5V",
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNB100000AEVV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "name": "TSV Steinhaldenfeld",
+          "clubId": "00ES8GNB100000AEVV0AG08LVUPGND5I"
+        },
+        "homeTeam": {
+          "teamPermanentId": "02AUKP5JMG000000VS5489B1VTFE8486",
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/01V6DO1DMC000000VS54898FVV1DS78G/verband/0123456789ABCDEF0123456700004200",
+          "name": "VfL Sindelfingen Ladies I",
+          "clubId": "01V6DO1DMC000000VS54898FVV1DS78G"
+        },
+        "result": {
+          "text": "14:0",
+          "homeResult": "14",
+          "guestResult": "0"
+        },
+        "hasSubscription": false,
+        "venue": null,
+        "prePublished": false
+      },
+      {
+        "id": "032044DOFG000000VS5489BUVSORQI22",
+        "status": "scheduled",
+        "kickoff": {
+          "dateKey": "2092039703",
+          "date": "20.09.2026",
+          "dateWithWeekday": "Sonntag, 20.09.2026",
+          "time": "10:30"
+        },
+        "live": false,
+        "liveTickerCount": null,
+        "videoCount": 0,
+        "notAllocated": false,
+        "competitionName": "Quali-​Regionenstaffel Mitte 2",
+        "competitionBasicTypeId": "",
+        "competitionBasicTypeName": "",
+        "compoundId": "031LPSKDE0000004VS5489BUVVKNMR0J-G",
+        "leagueLevel": "",
+        "teamType": "C-​Juniorinnen",
+        "guestTeam": {
+          "teamPermanentId": "02L0KH4T1O000000VS5489B1VSQ1P8QJ",
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNB1000009JVV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "name": "Spvgg Cannstatt",
+          "clubId": "00ES8GNB1000009JVV0AG08LVUPGND5I"
+        },
+        "homeTeam": {
+          "teamPermanentId": "02H5TRC39G000000VS5489B2VSOUQ13A",
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNB10000092VV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "name": "SG Stuttgart West",
+          "clubId": "00ES8GNB10000092VV0AG08LVUPGND5I"
+        },
+        "result": {
+          "text": "- : -",
+          "specialResult": false
+        },
+        "hasSubscription": true,
+        "venue": null,
+        "prePublished": false
+      },
+      {
+        "id": "032044DOJ0000000VS5489BUVSORQI22",
+        "status": "scheduled",
+        "kickoff": {
+          "dateKey": "2092039703",
+          "date": "20.09.2026",
+          "dateWithWeekday": "Sonntag, 20.09.2026",
+          "time": "13:00"
+        },
+        "live": false,
+        "liveTickerCount": null,
+        "videoCount": 0,
+        "notAllocated": false,
+        "competitionName": "Quali-​Regionenstaffel Mitte 2",
+        "competitionBasicTypeId": "",
+        "competitionBasicTypeName": "",
+        "compoundId": "031LPSKDE0000004VS5489BUVVKNMR0J-G",
+        "leagueLevel": "",
+        "teamType": "C-​Juniorinnen",
+        "guestTeam": {
+          "teamPermanentId": "01DOND5Q5S000000VV0AG811VTPFGC7P",
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00IT1V04I4000000VTVG0001VVN6I0SS/verband/0123456789ABCDEF0123456700004200",
+          "name": "1. FC Lauchhau-​Lauchäcker 04",
+          "clubId": "00IT1V04I4000000VTVG0001VVN6I0SS"
+        },
+        "homeTeam": {
+          "teamPermanentId": "01HECQL0IS000000VV0AG80NVTE4NR7G",
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/01DS4U7PM4000000VV0AG811VV1JA936/verband/0123456789ABCDEF0123456700004200",
+          "name": "FC Esslingen I",
+          "clubId": "01DS4U7PM4000000VV0AG811VV1JA936"
+        },
+        "result": {
+          "text": "- : -",
+          "specialResult": false
+        },
+        "hasSubscription": true,
+        "venue": null,
+        "prePublished": false
+      },
+      {
+        "id": "032044DOKK000000VS5489BUVSORQI22",
+        "status": "scheduled",
+        "kickoff": {
+          "dateKey": "2092039703",
+          "date": "20.09.2026",
+          "dateWithWeekday": "Sonntag, 20.09.2026",
+          "time": "17:00"
+        },
+        "live": false,
+        "liveTickerCount": null,
+        "videoCount": 0,
+        "notAllocated": false,
+        "competitionName": "Quali-​Regionenstaffel Mitte 2",
+        "competitionBasicTypeId": "",
+        "competitionBasicTypeName": "",
+        "compoundId": "031LPSKDE0000004VS5489BUVVKNMR0J-G",
+        "leagueLevel": "",
+        "teamType": "C-​Juniorinnen",
+        "guestTeam": {
+          "teamPermanentId": "023N0RIIVG000000VS548984VVA56K3S",
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNAT800002OVV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "name": "TSV Bernhausen",
+          "clubId": "00ES8GNAT800002OVV0AG08LVUPGND5I"
+        },
+        "homeTeam": {
+          "teamPermanentId": "01SNFEALAG000000VS548984VT4EU5FS",
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNB1000009UVV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "name": "SV Hoffeld",
+          "clubId": "00ES8GNB1000009UVV0AG08LVUPGND5I"
+        },
+        "result": {
+          "text": "- : -",
+          "specialResult": false
+        },
+        "hasSubscription": true,
+        "venue": null,
+        "prePublished": false
+      }
+    ],
+    "roundOptions": [],
+    "defaultByTeams": "",
+    "showTable": true,
+    "table": {
+      "promotionTeamCount": 1,
+      "relegationTeamCount": 0,
+      "promotionPlayoffTeamCount": 1,
+      "relegationPlayoffTeamCount": 0,
+      "entries": [
+        {
+          "teamPermanentId": "02AUKP5JMG000000VS5489B1VTFE8486",
+          "position": "1",
+          "teamName": "VfL Sindelfingen Ladies I",
+          "matchesWon": "1",
+          "matchesDrawn": "0",
+          "matchesLost": "0",
+          "goalsPlus": "14",
+          "goalsMinus": "0",
+          "points": "3",
+          "pointsQuotient": "3",
+          "trend": 0,
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/01V6DO1DMC000000VS54898FVV1DS78G/verband/0123456789ABCDEF0123456700004200",
+          "live": false,
+          "clubId": "01V6DO1DMC000000VS54898FVV1DS78G",
+          "associationName": "Württemberg",
+          "teamTypeName": "C-​Juniorinnen",
+          "matches": "1",
+          "goalRatio": "14:0",
+          "goalDifference": "14"
+        },
+        {
+          "teamPermanentId": "027N0F99P0000000VS5489B2VSOPA3SJ",
+          "position": "2",
+          "teamName": "TSV Heumaden",
+          "matchesWon": "1",
+          "matchesDrawn": "0",
+          "matchesLost": "0",
+          "goalsPlus": "6",
+          "goalsMinus": "0",
+          "points": "3",
+          "pointsQuotient": "3",
+          "trend": 0,
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNB1000009TVV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "live": false,
+          "clubId": "00ES8GNB1000009TVV0AG08LVUPGND5I",
+          "associationName": "Württemberg",
+          "teamTypeName": "C-​Juniorinnen",
+          "matches": "1",
+          "goalRatio": "6:0",
+          "goalDifference": "6"
+        },
+        {
+          "teamPermanentId": "01DOND5Q5S000000VV0AG811VTPFGC7P",
+          "position": "3",
+          "teamName": "1. FC Lauchhau-​Lauchäcker 04",
+          "matchesWon": "0",
+          "matchesDrawn": "0",
+          "matchesLost": "0",
+          "goalsPlus": "0",
+          "goalsMinus": "0",
+          "points": "0",
+          "pointsQuotient": "0",
+          "trend": 0,
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00IT1V04I4000000VTVG0001VVN6I0SS/verband/0123456789ABCDEF0123456700004200",
+          "live": false,
+          "clubId": "00IT1V04I4000000VTVG0001VVN6I0SS",
+          "associationName": "Württemberg",
+          "teamTypeName": "C-​Juniorinnen",
+          "matches": "0",
+          "goalRatio": "0:0",
+          "goalDifference": "0"
+        },
+        {
+          "teamPermanentId": "01HECQL0IS000000VV0AG80NVTE4NR7G",
+          "position": "3",
+          "teamName": "FC Esslingen I",
+          "matchesWon": "0",
+          "matchesDrawn": "0",
+          "matchesLost": "0",
+          "goalsPlus": "0",
+          "goalsMinus": "0",
+          "points": "0",
+          "pointsQuotient": "0",
+          "trend": 0,
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/01DS4U7PM4000000VV0AG811VV1JA936/verband/0123456789ABCDEF0123456700004200",
+          "live": false,
+          "clubId": "01DS4U7PM4000000VV0AG811VV1JA936",
+          "associationName": "Württemberg",
+          "teamTypeName": "C-​Juniorinnen",
+          "matches": "0",
+          "goalRatio": "0:0",
+          "goalDifference": "0"
+        },
+        {
+          "teamPermanentId": "02H5TRC39G000000VS5489B2VSOUQ13A",
+          "position": "3",
+          "teamName": "SG Stuttgart West",
+          "matchesWon": "0",
+          "matchesDrawn": "0",
+          "matchesLost": "0",
+          "goalsPlus": "0",
+          "goalsMinus": "0",
+          "points": "0",
+          "pointsQuotient": "0",
+          "trend": 0,
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNB10000092VV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "live": false,
+          "clubId": "00ES8GNB10000092VV0AG08LVUPGND5I",
+          "associationName": "Württemberg",
+          "teamTypeName": "C-​Juniorinnen",
+          "matches": "0",
+          "goalRatio": "0:0",
+          "goalDifference": "0"
+        },
+        {
+          "teamPermanentId": "01SNFEALAG000000VS548984VT4EU5FS",
+          "position": "3",
+          "teamName": "SV Hoffeld",
+          "matchesWon": "0",
+          "matchesDrawn": "0",
+          "matchesLost": "0",
+          "goalsPlus": "0",
+          "goalsMinus": "0",
+          "points": "0",
+          "pointsQuotient": "0",
+          "trend": 0,
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNB1000009UVV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "live": false,
+          "clubId": "00ES8GNB1000009UVV0AG08LVUPGND5I",
+          "associationName": "Württemberg",
+          "teamTypeName": "C-​Juniorinnen",
+          "matches": "0",
+          "goalRatio": "0:0",
+          "goalDifference": "0"
+        },
+        {
+          "teamPermanentId": "02L0KH4T1O000000VS5489B1VSQ1P8QJ",
+          "position": "3",
+          "teamName": "Spvgg Cannstatt",
+          "matchesWon": "0",
+          "matchesDrawn": "0",
+          "matchesLost": "0",
+          "goalsPlus": "0",
+          "goalsMinus": "0",
+          "points": "0",
+          "pointsQuotient": "0",
+          "trend": 0,
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNB1000009JVV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "live": false,
+          "clubId": "00ES8GNB1000009JVV0AG08LVUPGND5I",
+          "associationName": "Württemberg",
+          "teamTypeName": "C-​Juniorinnen",
+          "matches": "0",
+          "goalRatio": "0:0",
+          "goalDifference": "0"
+        },
+        {
+          "teamPermanentId": "023N0RIIVG000000VS548984VVA56K3S",
+          "position": "3",
+          "teamName": "TSV Bernhausen",
+          "matchesWon": "0",
+          "matchesDrawn": "0",
+          "matchesLost": "0",
+          "goalsPlus": "0",
+          "goalsMinus": "0",
+          "points": "0",
+          "pointsQuotient": "0",
+          "trend": 0,
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNAT800002OVV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "live": false,
+          "clubId": "00ES8GNAT800002OVV0AG08LVUPGND5I",
+          "associationName": "Württemberg",
+          "teamTypeName": "C-​Juniorinnen",
+          "matches": "0",
+          "goalRatio": "0:0",
+          "goalDifference": "0"
+        },
+        {
+          "teamPermanentId": "02ICHRF9A0000000VS5489B2VU2I8R4H",
+          "position": "9",
+          "teamName": "TSV Deizisau",
+          "matchesWon": "0",
+          "matchesDrawn": "0",
+          "matchesLost": "1",
+          "goalsPlus": "0",
+          "goalsMinus": "6",
+          "points": "0",
+          "pointsQuotient": "0",
+          "trend": 0,
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNAUG00001TVV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "live": false,
+          "clubId": "00ES8GNAUG00001TVV0AG08LVUPGND5I",
+          "associationName": "Württemberg",
+          "teamTypeName": "C-​Juniorinnen",
+          "matches": "1",
+          "goalRatio": "0:6",
+          "goalDifference": "-​6"
+        },
+        {
+          "teamPermanentId": "02ESQGI450000000VS5489B1VT0RKM5V",
+          "position": "10",
+          "teamName": "TSV Steinhaldenfeld",
+          "matchesWon": "0",
+          "matchesDrawn": "0",
+          "matchesLost": "1",
+          "goalsPlus": "0",
+          "goalsMinus": "14",
+          "points": "0",
+          "pointsQuotient": "0",
+          "trend": 0,
+          "clubLogoURL": "https://www.fussball.de/export.media/-/action/getLogo/id/00ES8GNB100000AEVV0AG08LVUPGND5I/verband/0123456789ABCDEF0123456700004200",
+          "live": false,
+          "clubId": "00ES8GNB100000AEVV0AG08LVUPGND5I",
+          "associationName": "Württemberg",
+          "teamTypeName": "C-​Juniorinnen",
+          "matches": "1",
+          "goalRatio": "0:14",
+          "goalDifference": "-​14"
+        }
+      ]
+    },
+    "widgetQueryParams": {
+      "isPrintMode": false,
+      "matchView": "next",
+      "matchesOrTable": "matches"
+    },
+    "invalidReferrer": false
+  },
+  "__N_SSP": true
+}

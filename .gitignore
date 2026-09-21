@@ -1,2 +1,6 @@
 /.idea/
 /harbour-fussball-de.pro.user
+/tools/font_obfuscation/fussball_decoder
+/tools/font_obfuscation/main.o
+/tools/font_obfuscation/fontdecoder.o
+/tools/font_obfuscation/.qmake.stash

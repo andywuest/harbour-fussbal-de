@@ -32,4 +32,5 @@ The JSON result provided by the endpoint is then to be obfuscated, using the fon
 the font decoding use the main.cpp in tools/font_obfuscation as reference. The decoded json is the emitted as result. 
 Add a Connections element to the OverviwPage to receive the result of the getMatchDay method. 
 
-Call the get getMatchDay method in the OverviewPage to get the data and log the response to the console. 
+Call the get getMatchDay method in the OverviewPage to get the data and log the response to the console.
+Additionally replace the mock data previously defined with the actual game results from the service call.

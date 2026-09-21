@@ -8,9 +8,51 @@ Page {
     // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
 
+    property string competitionName
+    property int currentMatchDay: 0
+
+    function logoColor(name) {
+        var palette = ["#4a90d9", "#3cb371", "#d9a441", "#b03a3a", "#8e44ad", "#d35400",
+                       "#2980b9", "#16a085", "#c0392b", "#3498db", "#1abc9c", "#e67e22"]
+        var hash = 0
+        for (var i = 0; i < name.length; ++i)
+            hash = (hash * 31 + name.charCodeAt(i)) % 0xFFFFFF
+        return palette[hash % palette.length]
+    }
+
+    function applyResult(decodedJson) {
+        console.log("Game day result: " + JSON.stringify(decodedJson))
+
+        var pageProps = decodedJson.pageProps ? decodedJson.pageProps : {}
+        competitionName = pageProps.competitionName ? pageProps.competitionName : ""
+        currentMatchDay = pageProps.currentMatchDay ? pageProps.currentMatchDay : 0
+
+        var matches = pageProps.matches ? pageProps.matches : []
+        gameDayModel.clear()
+        for (var i = 0; i < matches.length; ++i) {
+            var match = matches[i]
+            var home = match.homeTeam ? match.homeTeam : {}
+            var guest = match.guestTeam ? match.guestTeam : {}
+            var kickoff = match.kickoff ? match.kickoff : {}
+            gameDayModel.append({
+                matchDate: (kickoff.dateWithWeekday ? kickoff.dateWithWeekday + " " : "") + (kickoff.time ? kickoff.time : ""),
+                homeTeamName: home.name ? home.name : "",
+                homeTeamLogo: home.name ? home.name[0] : "",
+                homeTeamLogoUrl: home.clubLogoURL ? home.clubLogoURL : "",
+                homeTeamLogoColor: logoColor(home.name ? home.name : ""),
+                awayTeamName: guest.name ? guest.name : "",
+                awayTeamLogo: guest.name ? guest.name[0] : "",
+                awayTeamLogoUrl: guest.clubLogoURL ? guest.clubLogoURL : "",
+                awayTeamLogoColor: logoColor(guest.name ? guest.name : ""),
+                homeGoals: match.result && match.result.homeResult ? parseInt(match.result.homeResult) : 0,
+                awayGoals: match.result && match.result.guestResult ? parseInt(match.result.guestResult) : 0
+            })
+        }
+    }
+
     Connections {
         target: fussballBackend
-        onResultReady: console.log("Game day result: " + JSON.stringify(decodedJson))
+        onResultReady: page.applyResult(decodedJson)
         onLoadFailed: console.log("FussballBackend error: " + error)
     }
 
@@ -22,131 +64,23 @@ Page {
         id: listView
         anchors.fill: parent
 
-        // JavaScript model with mock data for 10 made-up matches.
-        model: [
-            {
-                matchDate: "Sa, 25.01.2026, 15:30",
-                homeTeamName: "FC Küstenwanderer",
-                homeTeamLogo: "KW",
-                homeTeamLogoColor: "#4a90d9",
-                awayTeamName: "SV Wellenbändiger",
-                awayTeamLogo: "WB",
-                awayTeamLogoColor: "#d97742",
-                homeGoals: 2,
-                awayGoals: 1
-            },
-            {
-                matchDate: "Sa, 25.01.2026, 15:30",
-                homeTeamName: "TSV Hafenkicker",
-                homeTeamLogo: "HK",
-                homeTeamLogoColor: "#3cb371",
-                awayTeamName: "FC Nordwind",
-                awayTeamLogo: "NW",
-                awayTeamLogoColor: "#4682b4",
-                homeGoals: 0,
-                awayGoals: 0
-            },
-            {
-                matchDate: "Sa, 25.01.2026, 15:30",
-                homeTeamName: "Sportfreunde Düne",
-                homeTeamLogo: "SD",
-                homeTeamLogoColor: "#d9a441",
-                awayTeamName: "Rot-Weiß Fähre",
-                awayTeamLogo: "RF",
-                awayTeamLogoColor: "#b03a3a",
-                homeGoals: 3,
-                awayGoals: 2
-            },
-            {
-                matchDate: "Sa, 25.01.2026, 18:00",
-                homeTeamName: "SV Uferrand",
-                homeTeamLogo: "UR",
-                homeTeamLogoColor: "#8e44ad",
-                awayTeamName: "BSG Leuchtturm",
-                awayTeamLogo: "LT",
-                awayTeamLogoColor: "#2c3e50",
-                homeGoals: 1,
-                awayGoals: 1
-            },
-            {
-                matchDate: "Sa, 25.01.2026, 18:00",
-                homeTeamName: "FC Deichgrafen",
-                homeTeamLogo: "DG",
-                homeTeamLogoColor: "#27ae60",
-                awayTeamName: "TuS Molenbrüder",
-                awayTeamLogo: "MB",
-                awayTeamLogoColor: "#d35400",
-                homeGoals: 0,
-                awayGoals: 2
-            },
-            {
-                matchDate: "So, 26.01.2026, 13:00",
-                homeTeamName: "Borussia Watt",
-                homeTeamLogo: "BW",
-                homeTeamLogoColor: "#e67e22",
-                awayTeamName: "VfB Südwind",
-                awayTeamLogo: "SW",
-                awayTeamLogoColor: "#2980b9",
-                homeGoals: 4,
-                awayGoals: 1
-            },
-            {
-                matchDate: "So, 26.01.2026, 13:00",
-                homeTeamName: "SC Hansestadt",
-                homeTeamLogo: "HS",
-                homeTeamLogoColor: "#e74c3c",
-                awayTeamName: "SV Muschelberg",
-                awayTeamLogo: "MG",
-                awayTeamLogoColor: "#16a085",
-                homeGoals: 1,
-                awayGoals: 3
-            },
-            {
-                matchDate: "So, 26.01.2026, 15:30",
-                homeTeamName: "FC Seepferdchen",
-                homeTeamLogo: "SP",
-                homeTeamLogoColor: "#7f8c8d",
-                awayTeamName: "Union Leuchtboje",
-                awayTeamLogo: "LB",
-                awayTeamLogoColor: "#c0392b",
-                homeGoals: 2,
-                awayGoals: 2
-            },
-            {
-                matchDate: "So, 26.01.2026, 15:30",
-                homeTeamName: "TSV Landspitze",
-                homeTeamLogo: "LS",
-                homeTeamLogoColor: "#3498db",
-                awayTeamName: "VfL Novembrum",
-                awayTeamLogo: "NV",
-                awayTeamLogoColor: "#95a5a6",
-                homeGoals: 0,
-                awayGoals: 1
-            },
-            {
-                matchDate: "So, 26.01.2026, 18:00",
-                homeTeamName: "Fortuna Ankerplatz",
-                homeTeamLogo: "FA",
-                homeTeamLogoColor: "#8e44ad",
-                awayTeamName: "SpVg Nebelschein",
-                awayTeamLogo: "NS",
-                awayTeamLogoColor: "#1abc9c",
-                homeGoals: 3,
-                awayGoals: 3
-            }
-        ]
+        ListModel {
+            id: gameDayModel
+        }
+
+        model: gameDayModel
 
         header: Column {
             width: listView.width
 
             PageHeader {
-                title: qsTr("Spieltag 18")
+                title: qsTr("Spieltag %1").arg(page.currentMatchDay > 0 ? page.currentMatchDay : "")
             }
 
             Label {
                 x: Theme.horizontalPageMargin
                 width: parent.width - (2 * Theme.horizontalPageMargin)
-                text: qsTr("Ergebnisse vom 25./26. Januar 2026")
+                text: page.competitionName
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeSmall
             }
@@ -161,15 +95,17 @@ Page {
         }
 
         delegate: GameResultListItem {
-            matchDate: modelData.matchDate
-            homeTeamName: modelData.homeTeamName
-            homeTeamLogo: modelData.homeTeamLogo
-            homeTeamLogoColor: modelData.homeTeamLogoColor
-            awayTeamName: modelData.awayTeamName
-            awayTeamLogo: modelData.awayTeamLogo
-            awayTeamLogoColor: modelData.awayTeamLogoColor
-            homeGoals: modelData.homeGoals
-            awayGoals: modelData.awayGoals
+            matchDate: model.matchDate
+            homeTeamName: model.homeTeamName
+            homeTeamLogo: model.homeTeamLogo
+            homeTeamLogoUrl: model.homeTeamLogoUrl
+            homeTeamLogoColor: model.homeTeamLogoColor
+            awayTeamName: model.awayTeamName
+            awayTeamLogo: model.awayTeamLogo
+            awayTeamLogoUrl: model.awayTeamLogoUrl
+            awayTeamLogoColor: model.awayTeamLogoColor
+            homeGoals: model.homeGoals
+            awayGoals: model.awayGoals
         }
 
         VerticalScrollDecorator {}

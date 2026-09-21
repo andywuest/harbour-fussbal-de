@@ -7,9 +7,11 @@ ListItem {
     property string matchDate
     property string homeTeamName
     property string homeTeamLogo
+    property string homeTeamLogoUrl
     property color homeTeamLogoColor: Theme.highlightColor
     property string awayTeamName
     property string awayTeamLogo
+    property string awayTeamLogoUrl
     property color awayTeamLogoColor: Theme.secondaryHighlightColor
     property int homeGoals: 0
     property int awayGoals: 0
@@ -44,20 +46,34 @@ ListItem {
                 anchors.verticalCenter: parent.verticalCenter
                 spacing: Theme.paddingSmall
 
-                Rectangle {
-                    id: homeLogo
+                Item {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: Theme.iconSizeMedium
                     height: width
-                    radius: width / 2
-                    color: root.homeTeamLogoColor
 
-                    Label {
-                        anchors.centerIn: parent
-                        text: root.homeTeamLogo
-                        color: Theme.primaryColor
-                        font.pixelSize: Theme.fontSizeSmall
-                        font.bold: true
+                    Rectangle {
+                        id: homeLogo
+                        anchors.fill: parent
+                        radius: width / 2
+                        color: root.homeTeamLogoColor
+                        visible: root.homeTeamLogoUrl.length === 0
+
+                        Label {
+                            anchors.centerIn: parent
+                            text: root.homeTeamLogo
+                            color: Theme.primaryColor
+                            font.pixelSize: Theme.fontSizeSmall
+                            font.bold: true
+                        }
+                    }
+
+                    Image {
+                        anchors.fill: parent
+                        source: root.homeTeamLogoUrl
+                        visible: root.homeTeamLogoUrl.length > 0
+                        fillMode: Image.PreserveAspectFit
+                        sourceSize.width: width
+                        sourceSize.height: height
                     }
                 }
 
@@ -78,20 +94,34 @@ ListItem {
                 anchors.verticalCenter: parent.verticalCenter
                 spacing: Theme.paddingSmall
 
-                Rectangle {
-                    id: awayLogo
+                Item {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: Theme.iconSizeMedium
                     height: width
-                    radius: width / 2
-                    color: root.awayTeamLogoColor
 
-                    Label {
-                        anchors.centerIn: parent
-                        text: root.awayTeamLogo
-                        color: Theme.primaryColor
-                        font.pixelSize: Theme.fontSizeSmall
-                        font.bold: true
+                    Rectangle {
+                        id: awayLogo
+                        anchors.fill: parent
+                        radius: width / 2
+                        color: root.awayTeamLogoColor
+                        visible: root.awayTeamLogoUrl.length === 0
+
+                        Label {
+                            anchors.centerIn: parent
+                            text: root.awayTeamLogo
+                            color: Theme.primaryColor
+                            font.pixelSize: Theme.fontSizeSmall
+                            font.bold: true
+                        }
+                    }
+
+                    Image {
+                        anchors.fill: parent
+                        source: root.awayTeamLogoUrl
+                        visible: root.awayTeamLogoUrl.length > 0
+                        fillMode: Image.PreserveAspectFit
+                        sourceSize.width: width
+                        sourceSize.height: height
                     }
                 }
 
