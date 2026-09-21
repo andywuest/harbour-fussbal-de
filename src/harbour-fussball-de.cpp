@@ -3,6 +3,11 @@
 #endif
 
 #include <sailfishapp.h>
+#include <QGuiApplication>
+#include <QQmlContext>
+#include <QQuickView>
+#include <QScopedPointer>
+#include <QtQml>
 
 #include "constants.h"
 #include "fussballbackend.h"

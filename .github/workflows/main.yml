@@ -38,13 +38,13 @@ jobs:
           #./runTests.sh
           #./fixJunit.sh
 
-      - name: Test Report
-        uses: dorny/test-reporter@v3
-        if: ${{ !cancelled() }}                                   # run this step even if previous step failed
-        with:
-          name: QML/C++ Tests                                     # Name of the check run which will be created
-          path: test/qml/*.xml,test/cpp/*.xml                     # Path to test results
-          reporter: jest-junit                                    # Format of test results - because junit cannot be generated
+#      - name: Test Report
+#        uses: dorny/test-reporter@v3
+#        if: ${{ !cancelled() }}                                   # run this step even if previous step failed
+#        with:
+#          name: QML/C++ Tests                                     # Name of the check run which will be created
+#          path: test/qml/*.xml,test/cpp/*.xml                     # Path to test results
+#          reporter: jest-junit                                    # Format of test results - because junit cannot be generated
 
   build:
     name: Build & Package
