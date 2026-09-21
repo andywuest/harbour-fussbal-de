@@ -14,7 +14,19 @@ TARGET = harbour-fussball-de
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-fussball-de.cpp
+QT += network
+
+SOURCES += src/harbour-fussball-de.cpp \
+    src/fontobfuscation/fontdecoder.cpp \
+    src/fussballbackend.cpp
+
+HEADERS += src/constants.h \
+    src/fontobfuscation/fontdecoder.h \
+    src/fontobfuscation/agl_data.h \
+    src/fontobfuscation/post_names.h \
+    src/fussballbackend.h
+
+LIBS += -lz
 
 DISTFILES += qml/harbour-fussball-de.qml \
     qml/cover/CoverPage.qml \

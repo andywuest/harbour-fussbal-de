@@ -4,6 +4,9 @@
 
 #include <sailfishapp.h>
 
+#include "constants.h"
+#include "fussballbackend.h"
+
 int main(int argc, char *argv[])
 {
     // SailfishApp::main() will display "qml/harbour-fussball-de.qml", if you need more
@@ -16,5 +19,21 @@ int main(int argc, char *argv[])
     //
     // To display the view, call "show()" (will show fullscreen on device).
 
-    return SailfishApp::main(argc, argv);
+    //return SailfishApp::main(argc, argv);
+
+    QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
+
+    app->setOrganizationDomain(ORGANISATION);
+    app->setOrganizationName(ORGANISATION); // needed for Sailjail
+    app->setApplicationName(APP_NAME);
+
+    QScopedPointer<QQuickView> view(SailfishApp::createView());
+
+    QQmlContext *context = view.data()->rootContext();
+    FussballBackend fussballBackend;
+    context->setContextProperty("fussballBackend", &fussballBackend);
+
+    view->setSource(SailfishApp::pathTo("qml/harbour-fullball-de.qml"));
+    view->show();
+    return app->exec();
 }

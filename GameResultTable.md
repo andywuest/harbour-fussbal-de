@@ -22,4 +22,11 @@ Use mock data for 10 made up matches, which are then displayed in the page. Do n
 create a javascript model. Do use a SilicaListView with delegate ListItem instead of a Repeater.
 
 Add the fontdecoder in c++ (with all dependencies) from the tools/font_obfuscation directory to the SailfishOS project 
-under the src directory. Create a new directory fontobfuscation in the src directory. 
+under the src directory. Create a new directory fontobfuscation in the src directory.
+
+Add new header file constants.h to the project defining the endpoint for the game results. The url is (for match day 2 is)
+https://next.fussball.de/_next/data/3GE9wzufdQY_tRu-Qkpfs/de/widget/competition/ac5e71aa-1ee8-4579-9508-1a2f27fe240d/spieltag/2.json
+
+Add method getMatchDay(int) to the FussballBackend that calls the endpoint for the match results and setts the proper match day.
+The JSON result provided by the endpoint is then to be obfuscated, using the font decoder class. For an example how to apply
+the font decoding use the main.cpp in tools/font_obfuscation as reference.
