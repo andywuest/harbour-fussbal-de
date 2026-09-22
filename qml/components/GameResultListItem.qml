@@ -30,7 +30,7 @@ ListItem {
             id: dateLabel
             text: root.matchDate
             color: Theme.secondaryColor
-            font.pixelSize: Theme.fontSizeSmall
+            font.pixelSize: Theme.fontSizeExtraSmall
             anchors.horizontalCenter: parent.horizontalCenter
         }
 

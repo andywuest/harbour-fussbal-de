@@ -16,7 +16,7 @@ class FussballBackend : public QObject
     Q_PROPERTY(QJsonArray matches READ matches NOTIFY matchesChanged)
 
 public:
-    explicit FussballBackend(QObject *parent = nullptr);
+    explicit FussballBackend(const QString &fontDir, QObject *parent = nullptr);
 
     int matchDay() const { return m_matchDay; }
     const QJsonArray &matches() const { return m_matches; }
@@ -36,6 +36,7 @@ private:
 
     QNetworkAccessManager m_network;
     FontDecoder m_decoder;
+    QString m_fontDir;
     int m_matchDay = 0;
     QJsonArray m_matches;
     QJsonObject m_jsonDoc;

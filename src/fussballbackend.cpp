@@ -2,6 +2,9 @@
 
 #include "constants.h"
 
+#include <QDebug>
+#include <QDir>
+#include <QFile>
 #include <QJsonDocument>
 #include <QJsonParseError>
 #include <QNetworkReply>
@@ -18,8 +21,9 @@ QString fontUrl(const QString &fontId)
 
 } // namespace
 
-FussballBackend::FussballBackend(QObject *parent)
+FussballBackend::FussballBackend(const QString &fontDir, QObject *parent)
     : QObject(parent)
+    , m_fontDir(fontDir)
 {
 }
 
@@ -66,18 +70,44 @@ void FussballBackend::fetchJson(int matchDay)
 void FussballBackend::fetchFont(const QString &fontId)
 {
     m_fontId = fontId;
+
+    // looks like there is an indefinite number of font files, since we are always getting a different fontId
+    const QString fontPath = QDir(m_fontDir).filePath(fontId + QStringLiteral(".woff"));
+    if (QFile::exists(fontPath)) {
+        qDebug() << "font taken from file:" << fontPath;
+        QFile file(fontPath);
+        if (file.open(QIODevice::ReadOnly) && m_decoder.loadFont(file.readAll())) {
+            decodeAndStore();
+            return;
+        }
+        qDebug() << "font file could not be used:" << fontPath;
+    }
+
+    qDebug() << "font url: " << QUrl(fontUrl(fontId));
+
     QNetworkRequest request(QUrl(fontUrl(fontId)));
     // request.setTransferTimeout(30000);
 
     QNetworkReply *reply = m_network.get(request);
-    connect(reply, &QNetworkReply::finished, this, [this, reply] {
+    connect(reply, &QNetworkReply::finished, this, [this, reply, fontPath] {
         reply->deleteLater();
         if (reply->error() != QNetworkReply::NoError) {
             emit loadFailed(reply->errorString());
             return;
         }
 
-        if (!m_decoder.loadFont(reply->readAll())) {
+        const QByteArray fontData = reply->readAll();
+
+        QFile file(fontPath);
+        if (file.open(QIODevice::WriteOnly)) {
+            file.write(fontData);
+            file.close();
+            qDebug() << "font stored in file:" << fontPath;
+        } else {
+            qDebug() << "font could not be stored:" << fontPath;
+        }
+
+        if (!m_decoder.loadFont(fontData)) {
             emit loadFailed(m_decoder.error());
             return;
         }

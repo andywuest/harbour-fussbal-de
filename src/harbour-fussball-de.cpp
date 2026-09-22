@@ -3,10 +3,12 @@
 #endif
 
 #include <sailfishapp.h>
+#include <QDir>
 #include <QGuiApplication>
 #include <QQmlContext>
 #include <QQuickView>
 #include <QScopedPointer>
+#include <QStandardPaths>
 #include <QtQml>
 
 #include "constants.h"
@@ -26,6 +28,19 @@ int main(int argc, char *argv[])
 
     //return SailfishApp::main(argc, argv);
 
+    // The new location of the LocalStorage database
+    QDir fontDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
+                  + QString("/%1/%2/font/").arg(ORGANISATION, APP_NAME));
+    QDir logoDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
+                  + QString("/%1/%2/logos/").arg(ORGANISATION, APP_NAME));
+
+    if (!fontDir.exists()) {
+        fontDir.mkpath(fontDir.path());
+    }
+    if (!logoDir.exists()) {
+        logoDir.mkpath(logoDir.path());
+    }
+
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
 
     app->setOrganizationDomain(ORGANISATION);
@@ -35,7 +50,7 @@ int main(int argc, char *argv[])
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
     QQmlContext *context = view.data()->rootContext();
-    FussballBackend fussballBackend;
+    FussballBackend fussballBackend(fontDir.path());
     context->setContextProperty("fussballBackend", &fussballBackend);
 
     view->setSource(SailfishApp::pathTo("qml/harbour-fussball-de.qml"));

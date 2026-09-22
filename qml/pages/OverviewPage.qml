@@ -85,19 +85,17 @@ Page {
 
             PageHeader {
                 title: qsTr("Spieltag %1").arg(page.currentMatchDay + 1)
+                description: page.competitionName
             }
 
-            Label {
-                x: Theme.horizontalPageMargin
-                width: parent.width - (2 * Theme.horizontalPageMargin)
-                text: page.competitionName
-                color: Theme.secondaryHighlightColor
-                font.pixelSize: Theme.fontSizeSmall
-            }
         }
 
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
+            MenuItem {
+                text: qsTr("Settings")
+                onClicked: pageStack.animatorPush(Qt.resolvedUrl("SettingsPage.qml"))
+            }
             MenuItem {
                 visible: page.currentMatchDay > 0
                 text: qsTr("Previous match day")
@@ -107,10 +105,6 @@ Page {
                 visible: page.currentMatchDay < page.maxMatchDay - 1
                 text: qsTr("Next match day")
                 onClicked: page.loadMatchDay(page.currentMatchDay + 1)
-            }
-            MenuItem {
-                text: qsTr("Settings")
-                onClicked: pageStack.animatorPush(Qt.resolvedUrl("SettingsPage.qml"))
             }
         }
 

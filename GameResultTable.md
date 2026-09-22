@@ -44,5 +44,8 @@ for the match day is to be loaded and displayed. The maximum number of the match
 If the current match day is 0, the pully for the previous match day is not to be displayed. If the current match day is the last 
 match day, the next match day pully is not to be displayed, so we cannot violate the match day boundaries.
 
-
+In order not to download the font all over again, when changing the match day, the downloaded font will be stored in the 
+fontDir (see harbour-fussball-de.cpp) with the name <fontId>.woff. The fetchFont method will also be extended to check if the
+font already exists in the fontDir for the given fontId. If the file already exists it is used, otherwise it will be downloaded
+and stored, so there is no need to download it the next time. Print a log message to the console, from where the font is taken.
 
