@@ -9,7 +9,8 @@ of the game. Also the date of the game is to be displayed.
 Center the logo and the name of the home away team in the middle of the column. Use only the default SFOS margins.
 Make sure that the home and away team get the same width, each 50% of the width.
 
-Create a separate component for the flickable items that display a single result.
+Create a separate component for the flickable items that display a single result. Add some top and bottom margin for
+the component.
 
 Put the components to the components directory.
 

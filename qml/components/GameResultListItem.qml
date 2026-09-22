@@ -16,21 +16,23 @@ ListItem {
     property int homeGoals: 0
     property int awayGoals: 0
 
-    contentHeight: contentColumn.height
+    contentHeight: contentColumn.height + (2 * Theme.paddingMedium)
 
     Column {
         id: contentColumn
+        anchors.bottomMargin: Theme.paddingMedium
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.leftMargin: Theme.horizontalPageMargin
         anchors.rightMargin: Theme.horizontalPageMargin
         spacing: Theme.paddingSmall
+        y: Theme.paddingMedium
 
         Label {
             id: dateLabel
             text: root.matchDate
             color: Theme.secondaryColor
-            font.pixelSize: Theme.fontSizeExtraSmall
+            font.pixelSize: Theme.fontSizeTiny
             anchors.horizontalCenter: parent.horizontalCenter
         }
 
