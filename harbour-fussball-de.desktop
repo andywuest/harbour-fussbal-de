@@ -3,18 +3,16 @@ Type=Application
 X-Nemo-Application-Type=silica-qt5
 Icon=harbour-fussball-de
 Exec=harbour-fussball-de
-Name=harbour-fussball-de
+Name=Fussball.de Widget
 # translation example:
 # your app name in German locale (de)
 #
 # Remember to comment out the following line, if you do not want to use
 # a different app name in German locale (de).
-Name[de]=harbour-fussball-de
+Name[de]=Fussball.de Widget
 
 [X-Sailjail]
-# Replace with your organization as a reverse domain name
-OrganizationName=org.myorg
-# ApplicationName does not have to be identical to Name
-ApplicationName=fussball-de
-# Add the required permissions here
-Permissions=
+OrganizationName=de.andreas-wuest-it-consulting
+ApplicationName=Fussball.de Widget
+Permissions=Internet
+

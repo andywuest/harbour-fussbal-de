@@ -34,3 +34,15 @@ Add a Connections element to the OverviwPage to receive the result of the getMat
 
 Call the get getMatchDay method in the OverviewPage to get the data and log the response to the console.
 Additionally replace the mock data previously defined with the actual game results from the service call.
+
+The currently selected match day is also stored in the ConfigurationGroup of the ApplicationWindow as currentMatchDay, by
+default it is 0 (match day index starts with 0).
+
+The OverviewPage has two additional pully menu entries. One to navigate to the previous match day. One to navigate to the next
+match day. When the pully is selected the updated match day is to be set and stored in the configuration. Additionally the data
+for the match day is to be loaded and displayed. The maximum number of the match day can be extracted from the json response.
+If the current match day is 0, the pully for the previous match day is not to be displayed. If the current match day is the last 
+match day, the next match day pully is not to be displayed, so we cannot violate the match day boundaries.
+
+
+

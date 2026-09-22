@@ -15,5 +15,6 @@ ApplicationWindow {
         path: "/apps/harbour-fussball-de/settings"
 
         property string competitionId: ""
+        property int currentMatchDay: 0
     }
 }

@@ -9,7 +9,15 @@ Page {
     allowedOrientations: Orientation.All
 
     property string competitionName
-    property int currentMatchDay: 0
+    property int currentMatchDay: settings.currentMatchDay
+    property int maxMatchDay: 0
+
+    function loadMatchDay(matchDayIndex) {
+        page.currentMatchDay = matchDayIndex
+        settings.currentMatchDay = matchDayIndex
+        settings.sync()
+        fussballBackend.getMatchDay(matchDayIndex + 1)
+    }
 
     function logoColor(name) {
         var palette = ["#4a90d9", "#3cb371", "#d9a441", "#b03a3a", "#8e44ad", "#d35400",
@@ -25,7 +33,9 @@ Page {
 
         var pageProps = decodedJson.pageProps ? decodedJson.pageProps : {}
         competitionName = pageProps.competitionName ? pageProps.competitionName : ""
-        currentMatchDay = pageProps.currentMatchDay ? pageProps.currentMatchDay : 0
+        var matchDays = pageProps.matchDays ? pageProps.matchDays : []
+        maxMatchDay = matchDays.length
+        currentMatchDay = pageProps.currentMatchDay > 0 ? (pageProps.currentMatchDay - 1) : 0
 
         var matches = pageProps.matches ? pageProps.matches : []
         gameDayModel.clear()
@@ -57,7 +67,7 @@ Page {
     }
 
     Component.onCompleted: {
-        fussballBackend.getMatchDay(2)
+        page.loadMatchDay(settings.currentMatchDay)
     }
 
     SilicaListView {
@@ -74,7 +84,7 @@ Page {
             width: listView.width
 
             PageHeader {
-                title: qsTr("Spieltag %1").arg(page.currentMatchDay > 0 ? page.currentMatchDay : "")
+                title: qsTr("Spieltag %1").arg(page.currentMatchDay + 1)
             }
 
             Label {
@@ -88,6 +98,16 @@ Page {
 
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
+            MenuItem {
+                visible: page.currentMatchDay > 0
+                text: qsTr("Previous match day")
+                onClicked: page.loadMatchDay(page.currentMatchDay - 1)
+            }
+            MenuItem {
+                visible: page.currentMatchDay < page.maxMatchDay - 1
+                text: qsTr("Next match day")
+                onClicked: page.loadMatchDay(page.currentMatchDay + 1)
+            }
             MenuItem {
                 text: qsTr("Settings")
                 onClicked: pageStack.animatorPush(Qt.resolvedUrl("SettingsPage.qml"))
