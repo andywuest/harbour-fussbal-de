@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 
     // The new location of the LocalStorage database
     QDir fontDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
-                  + QString("/%1/%2/font/").arg(ORGANISATION, APP_NAME));
+                  + QString("/%1/%2/fonts/").arg(ORGANISATION, APP_NAME));
     QDir logoDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
                   + QString("/%1/%2/logos/").arg(ORGANISATION, APP_NAME));
 
