@@ -4,7 +4,7 @@
 #include <QString>
 
 // sailjail data
-const char APP_NAME[] = "harbour-watchlist";
+const char APP_NAME[] = "harbour-fussball-de";
 const char ORGANISATION[] = "de.andreas-wuest-it-consulting";
 
 // Endpoint that delivers the JSON payload of one game day (match day 2 shown).
