@@ -32,7 +32,9 @@ DISTFILES += qml/harbour-fussball-de.qml \
     qml/cover/CoverPage.qml \
     qml/pages/OverviewPage.qml \
     qml/pages/SettingsPage.qml \
+    qml/pages/TablePage.qml \
     qml/components/GameResultListItem.qml \
+    qml/components/TableListItem.qml \
     rpm/harbour-fussball-de.changes.in \
     rpm/harbour-fussball-de.changes.run.in \
     rpm/harbour-fussball-de.spec \

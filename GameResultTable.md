@@ -50,3 +50,8 @@ fontDir (see harbour-fussball-de.cpp) with the name <fontId>.woff. The fetchFont
 font already exists in the fontDir for the given fontId. If the file already exists it is used, otherwise it will be downloaded
 and stored, so there is no need to download it the next time. Print a log message to the console, from where the font is taken.
 
+The json endpoint not only provides the match data, but also the table after the match day. Add a new TablePage.qml which 
+uses the same logic to fetch the data, but does not display the individual matches, but the table. Display the table with
+the team logo and name. For each table entry display the position, the number of matches, the won-draw-loss data the goal
+statistics and the points.
+

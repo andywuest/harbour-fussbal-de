@@ -26,6 +26,10 @@
         <source>Next match day</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Table</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsPage</name>
@@ -39,6 +43,21 @@
     </message>
     <message>
         <source>e.g. 125123</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TablePage</name>
+    <message>
+        <source>Tabelle - Spieltag %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Previous match day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next match day</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
