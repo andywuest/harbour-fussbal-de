@@ -53,6 +53,8 @@ int main(int argc, char *argv[])
     FussballBackend fussballBackend(fontDir.path());
     context->setContextProperty("fussballBackend", &fussballBackend);
 
+    context->setContextProperty("applicationVersion", QString(VERSION_NUMBER));
+
     view->setSource(SailfishApp::pathTo("qml/harbour-fussball-de.qml"));
     view->show();
     return app->exec();

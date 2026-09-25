@@ -1,6 +1,7 @@
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 import "../components"
+import "../components/thirdparty"
 
 Page {
     id: page
@@ -11,8 +12,10 @@ Page {
     property string competitionName
     property int currentMatchDay: settings.currentMatchDay
     property int maxMatchDay: 0
+    property bool loaded : false
 
     function loadMatchDay(matchDayIndex) {
+        loaded = false;
         page.currentMatchDay = matchDayIndex
         settings.currentMatchDay = matchDayIndex
         settings.sync()
@@ -29,7 +32,7 @@ Page {
     }
 
     function applyResult(decodedJson) {
-        console.log("Game day result: " + JSON.stringify(decodedJson))
+        // console.log("Game day result: " + JSON.stringify(decodedJson))
 
         var pageProps = decodedJson.pageProps ? decodedJson.pageProps : {}
         competitionName = pageProps.competitionName ? pageProps.competitionName : ""
@@ -60,16 +63,6 @@ Page {
         }
     }
 
-    Connections {
-        target: fussballBackend
-        onResultReady: page.applyResult(decodedJson)
-        onLoadFailed: console.log("FussballBackend error: " + error)
-    }
-
-    Component.onCompleted: {
-        page.loadMatchDay(settings.currentMatchDay)
-    }
-
     SilicaListView {
         id: listView
         anchors.fill: parent
@@ -92,6 +85,11 @@ Page {
 
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
+            MenuItem {
+                //: OverviewPage about menu item
+                text: qsTr("About")
+                onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+            }
             MenuItem {
                 text: qsTr("Settings")
                 onClicked: pageStack.animatorPush(Qt.resolvedUrl("SettingsPage.qml"))
@@ -128,4 +126,33 @@ Page {
 
         VerticalScrollDecorator {}
     }
+
+    LoadingIndicator {
+        id: dataLoadingIndicator
+        visible: !loaded
+        Behavior on opacity {
+            NumberAnimation {
+            }
+        }
+        opacity: loaded ? 0 : 1
+        height: parent.height
+        width: parent.width
+    }
+
+    Connections {
+        target: fussballBackend
+        onResultReady: {
+            page.applyResult(decodedJson)
+            loaded = true;
+        }
+        onLoadFailed: {
+            console.log("FussballBackend error: " + error)
+            loaded = true;
+        }
+    }
+
+    Component.onCompleted: {
+        page.loadMatchDay(settings.currentMatchDay)
+    }
+
 }

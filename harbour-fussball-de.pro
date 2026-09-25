@@ -26,18 +26,27 @@ HEADERS += src/constants.h \
     src/fontobfuscation/post_names.h \
     src/fussballbackend.h
 
+DEFINES += VERSION_NUMBER=\\\"$$(VERSION_NUMBER)\\\"
+
 LIBS += -lz
 
 DISTFILES += qml/harbour-fussball-de.qml \
     qml/cover/CoverPage.qml \
+    qml/pages/AboutPage.qml \
     qml/pages/OverviewPage.qml \
     qml/pages/SettingsPage.qml \
     qml/pages/TablePage.qml \
+    qml/components/thirdparty/AboutDescription.qml \
+    qml/components/thirdparty/AboutIconLabel.qml \
+    qml/components/thirdparty/LoadingINdicator.qml \
     qml/components/GameResultListItem.qml \
     qml/components/TableListItem.qml \
     rpm/harbour-fussball-de.changes.in \
     rpm/harbour-fussball-de.changes.run.in \
     rpm/harbour-fussball-de.spec \
+    qml/pages/icons/github.svg \
+    qml/pages/icons/liberapay.svg \
+    qml/pages/icons/paypal.svg \
     translations/*.ts \
     harbour-fussball-de.desktop
 
