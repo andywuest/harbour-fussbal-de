@@ -31,6 +31,25 @@ Page {
         return palette[hash % palette.length]
     }
 
+    function localLogo(logoUrl) {
+        if (!logoUrl)
+            return ""
+        var localUrl = fussballBackend.cachedLogoUrl(logoUrl)
+        if (localUrl.length === 0)
+            fussballBackend.cacheLogo(logoUrl)
+        return localUrl
+    }
+
+    function updateLogo(logoUrl, localUrl) {
+        for (var i = 0; i < gameDayModel.count; ++i) {
+            var match = gameDayModel.get(i)
+            if (match.homeTeamLogoSource === logoUrl)
+                gameDayModel.setProperty(i, "homeTeamLogoUrl", localUrl)
+            if (match.awayTeamLogoSource === logoUrl)
+                gameDayModel.setProperty(i, "awayTeamLogoUrl", localUrl)
+        }
+    }
+
     function applyResult(decodedJson) {
         // console.log("Game day result: " + JSON.stringify(decodedJson))
 
@@ -47,15 +66,19 @@ Page {
             var home = match.homeTeam ? match.homeTeam : {}
             var guest = match.guestTeam ? match.guestTeam : {}
             var kickoff = match.kickoff ? match.kickoff : {}
+            var homeLogoUrl = home.clubLogoURL ? home.clubLogoURL : ""
+            var awayLogoUrl = guest.clubLogoURL ? guest.clubLogoURL : ""
             gameDayModel.append({
                 matchDate: (kickoff.dateWithWeekday ? kickoff.dateWithWeekday + " " : "") + (kickoff.time ? kickoff.time : ""),
                 homeTeamName: home.name ? home.name : "",
                 homeTeamLogo: home.name ? home.name[0] : "",
-                homeTeamLogoUrl: home.clubLogoURL ? home.clubLogoURL : "",
+                homeTeamLogoSource: homeLogoUrl,
+                homeTeamLogoUrl: localLogo(homeLogoUrl),
                 homeTeamLogoColor: logoColor(home.name ? home.name : ""),
                 awayTeamName: guest.name ? guest.name : "",
                 awayTeamLogo: guest.name ? guest.name[0] : "",
-                awayTeamLogoUrl: guest.clubLogoURL ? guest.clubLogoURL : "",
+                awayTeamLogoSource: awayLogoUrl,
+                awayTeamLogoUrl: localLogo(awayLogoUrl),
                 awayTeamLogoColor: logoColor(guest.name ? guest.name : ""),
                 homeGoals: match.result && match.result.homeResult ? parseInt(match.result.homeResult) : 0,
                 awayGoals: match.result && match.result.guestResult ? parseInt(match.result.guestResult) : 0
@@ -149,6 +172,7 @@ Page {
             console.log("FussballBackend error: " + error)
             loaded = true;
         }
+        onLogoReady: page.updateLogo(logoUrl, localFileUrl)
     }
 
     Component.onCompleted: {

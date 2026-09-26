@@ -9,11 +9,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Fullball.de</source>
-        <extracomment>AboutPage - Name</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>TODO This is app is a simple ... . Fullball.de is open source and licensed under the GPL v3.</source>
         <extracomment>AboutPage text - about text</extracomment>
         <translation type="unfinished"></translation>
@@ -44,6 +39,11 @@
     </message>
     <message>
         <source>Donate with Liberapay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fussball.de</source>
+        <extracomment>AboutPage - Name</extracomment>
         <translation type="unfinished"></translation>
     </message>
 </context>

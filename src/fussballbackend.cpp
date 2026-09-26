@@ -2,6 +2,8 @@
 
 #include "constants.h"
 
+#include <QByteArray>
+#include <QCryptographicHash>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -19,11 +21,30 @@ QString fontUrl(const QString &fontId)
         .arg(fontId);
 }
 
+QString imageSuffix(const QByteArray &contentType)
+{
+    const QByteArray type = contentType.split(';').first().trimmed().toLower();
+    if (type == "image/jpeg" || type == "image/jpg") {
+        return QStringLiteral(".jpg");
+    }
+    if (type == "image/svg+xml") {
+        return QStringLiteral(".svg");
+    }
+    if (type == "image/webp") {
+        return QStringLiteral(".webp");
+    }
+    if (type == "image/gif") {
+        return QStringLiteral(".gif");
+    }
+    return QStringLiteral(".png");
+}
+
 } // namespace
 
-FussballBackend::FussballBackend(const QString &fontDir, QObject *parent)
+FussballBackend::FussballBackend(const QString &fontDir, const QString &logoDir, QObject *parent)
     : QObject(parent)
     , m_fontDir(fontDir)
+    , m_logoDir(logoDir)
 {
 }
 
@@ -125,4 +146,93 @@ void FussballBackend::decodeAndStore()
                     .toArray();
     emit matchesChanged();
     emit resultReady(decodedJson);
+}
+
+QString FussballBackend::logoFileName(const QString &logoUrl) const
+{
+    // The logo url contains a stable club id,
+    // e.g. https://www.fussball.de/export.media/-/action/getLogo/id/<clubId>/verband/<associationId>
+    const QString path = QUrl(logoUrl).path();
+    const int idIndex = path.indexOf(QStringLiteral("/id/"));
+    if (idIndex >= 0) {
+        const QString clubId = path.mid(idIndex + 4).section(QLatin1Char('/'), 0, 0);
+        if (!clubId.isEmpty()) {
+            return clubId;
+        }
+    }
+
+    return QString::fromLatin1(
+        QCryptographicHash::hash(logoUrl.toUtf8(), QCryptographicHash::Sha1).toHex());
+}
+
+QString FussballBackend::cachedLogoUrl(const QString &logoUrl) const
+{
+    if (logoUrl.isEmpty()) {
+        return QString();
+    }
+
+    const QString logoName = logoFileName(logoUrl);
+    const QDir logoDir(m_logoDir);
+    const QStringList fileNames = logoDir.entryList(QDir::Files, QDir::Name);
+    for (const QString &fileName : fileNames) {
+        if (fileName.startsWith(logoName + QLatin1Char('.'))) {
+            qDebug() << "logo taken from file:" << logoDir.filePath(fileName);
+            return QUrl::fromLocalFile(logoDir.filePath(fileName)).toString();
+        }
+    }
+
+    return QString();
+}
+
+QString FussballBackend::storeLogo(const QString &logoUrl, const QByteArray &logoData,
+                                   const QByteArray &contentType)
+{
+    const QString logoPath = QDir(m_logoDir).filePath(logoFileName(logoUrl) + imageSuffix(contentType));
+
+    QFile file(logoPath);
+    if (!file.open(QIODevice::WriteOnly)) {
+        qDebug() << "logo could not be stored:" << logoPath;
+        return QString();
+    }
+    file.write(logoData);
+    file.close();
+    qDebug() << "logo stored in file:" << logoPath;
+
+    return logoPath;
+}
+
+void FussballBackend::cacheLogo(const QString &logoUrl)
+{
+    if (logoUrl.isEmpty() || !cachedLogoUrl(logoUrl).isEmpty()) {
+        return;
+    }
+
+    if (m_pendingLogos.contains(logoUrl)) {
+        return;
+    }
+    m_pendingLogos.insert(logoUrl);
+
+    qDebug() << "logo url: " << logoUrl;
+
+    const QUrl url(logoUrl);
+    QNetworkRequest request(url);
+    // request.setTransferTimeout(30000);
+
+    QNetworkReply *reply = m_network.get(request);
+    connect(reply, &QNetworkReply::finished, this, [this, reply, logoUrl] {
+        reply->deleteLater();
+        m_pendingLogos.remove(logoUrl);
+        if (reply->error() != QNetworkReply::NoError) {
+            qDebug() << "logo could not be loaded:" << logoUrl << reply->errorString();
+            return;
+        }
+
+        const QString logoPath = storeLogo(logoUrl, reply->readAll(),
+                                           reply->header(QNetworkRequest::ContentTypeHeader).toByteArray());
+        if (logoPath.isEmpty()) {
+            return;
+        }
+
+        emit logoReady(logoUrl, QUrl::fromLocalFile(logoPath).toString());
+    });
 }

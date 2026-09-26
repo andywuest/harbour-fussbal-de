@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
     QQmlContext *context = view.data()->rootContext();
-    FussballBackend fussballBackend(fontDir.path());
+    FussballBackend fussballBackend(fontDir.path(), logoDir.path());
     context->setContextProperty("fussballBackend", &fussballBackend);
 
     context->setContextProperty("applicationVersion", QString(VERSION_NUMBER));

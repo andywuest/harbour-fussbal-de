@@ -28,6 +28,22 @@ Page {
         return palette[hash % palette.length]
     }
 
+    function localLogo(logoUrl) {
+        if (!logoUrl)
+            return ""
+        var localUrl = fussballBackend.cachedLogoUrl(logoUrl)
+        if (localUrl.length === 0)
+            fussballBackend.cacheLogo(logoUrl)
+        return localUrl
+    }
+
+    function updateLogo(logoUrl, localUrl) {
+        for (var i = 0; i < tableModel.count; ++i) {
+            if (tableModel.get(i).teamLogoSource === logoUrl)
+                tableModel.setProperty(i, "teamLogoUrl", localUrl)
+        }
+    }
+
     function applyTable(decodedJson) {
         console.log("Table result: " + JSON.stringify(decodedJson))
 
@@ -40,11 +56,13 @@ Page {
         tableModel.clear()
         for (var i = 0; i < entries.length; ++i) {
             var entry = entries[i]
+            var logoUrl = entry.clubLogoURL ? entry.clubLogoURL : ""
             tableModel.append({
                 position: entry.position ? entry.position : "",
                 teamName: entry.teamName ? entry.teamName : "",
                 teamLogo: entry.teamName ? entry.teamName[0] : "",
-                teamLogoUrl: entry.clubLogoURL ? entry.clubLogoURL : "",
+                teamLogoSource: logoUrl,
+                teamLogoUrl: localLogo(logoUrl),
                 teamLogoColor: logoColor(entry.teamName ? entry.teamName : ""),
                 matches: entry.matches ? entry.matches : "0",
                 won: entry.matchesWon ? entry.matchesWon : "0",
@@ -61,6 +79,7 @@ Page {
         target: fussballBackend
         onResultReady: page.applyTable(decodedJson)
         onLoadFailed: console.log("FussballBackend error: " + error)
+        onLogoReady: page.updateLogo(logoUrl, localFileUrl)
     }
 
     Component.onCompleted: {

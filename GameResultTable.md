@@ -55,3 +55,6 @@ uses the same logic to fetch the data, but does not display the individual match
 the team logo and name. For each table entry display the position, the number of matches, the won-draw-loss data the goal
 statistics and the points.
 
+The teams logos shall also be stored in the local file system in the logoDir. Basically the same logic shall be applied
+as for the fontDir (reload only, if it has not yet been loaded). In the QML Page the downloaded logos shall be used
+from the filesystem and not the original URL from the json data, to prevent unnecessary network traffic.
